@@ -502,22 +502,47 @@
 <script src="js/layout.js"></script>
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
-<!-- pg使用 -->
-<script src="js/pg.js"></script>
 <script>
-var table01Data = [{
-    checkbox: "checkbox",
-    存款性質: "設計文字",
-    存款銀行: "設計文字",
-    存款銀行名稱: "設計文字",
-    帳號: "設計文字",
-    帳號狀態: "設計文字",
-    帳列公司: "設計文字",
-}, ];
+let table01Data = [{
+        id: "a1",
+        title: "印鑑代號", field: "印鑑代號" ,
+        title: "印鑑分類", field: "印鑑分類" ,
+        title: "印鑑名稱", field: "印鑑名稱" ,
+        title: "英文名稱", field: "英文名稱" ,
+        title: "使用狀況", field: "使用狀況" ,
+        title: "生效日期", field: "生效日期" ,
+    },
+    {
+        id: "a2",
+        title: "印鑑代號", field: "印鑑代號" ,
+        title: "印鑑分類", field: "印鑑分類" ,
+        title: "印鑑名稱", field: "印鑑名稱" ,
+        title: "英文名稱", field: "英文名稱" ,
+        title: "使用狀況", field: "使用狀況" ,
+        title: "生效日期", field: "生效日期" ,
+    },
+    {
+        id: "a3",
+        title: "印鑑代號", field: "印鑑代號" ,
+        title: "印鑑分類", field: "印鑑分類" ,
+        title: "印鑑名稱", field: "印鑑名稱" ,
+        title: "英文名稱", field: "英文名稱" ,
+        title: "使用狀況", field: "使用狀況" ,
+        title: "生效日期", field: "生效日期" ,
+    },
+    {
+        id: "a4",
+        title: "印鑑代號", field: "印鑑代號" ,
+        title: "印鑑分類", field: "印鑑分類" ,
+        title: "印鑑名稱", field: "印鑑名稱" ,
+        title: "英文名稱", field: "英文名稱" ,
+        title: "使用狀況", field: "使用狀況" ,
+        title: "生效日期", field: "生效日期" ,
+    },
+]
 
 var table01 = new Tabulator("#table01", {
     data: table01Data,
-    autoColumns: true,
     layout: "fitColumns",
     height: "255px",
     pagination: "local",
@@ -529,9 +554,25 @@ var table01 = new Tabulator("#table01", {
     tooltipsHeader: true,
     tooltipGenerationMode: "hover",
     selectable: true,
-    columns: [
-        { title: "checkbox", field: "checkbox" },
-        { title: "印鑑代號", field: "印鑑代號" },
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+                {
+            title: "印鑑代號",
+            field: "印鑑代號",
+            formatter: function(cell, formatterParams, onRendered) {
+                return "<a href='#'>" + cell.getValue() + "</a>"
+            },
+        },
         { title: "印鑑分類", field: "印鑑分類" },
         { title: "印鑑名稱", field: "印鑑名稱" },
         { title: "英文名稱", field: "英文名稱" },
@@ -539,5 +580,9 @@ var table01 = new Tabulator("#table01", {
         { title: "生效日期", field: "生效日期" },
     ],
 });
+// 選擇預設勾選row
+// table.selectRow("a1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
 </script>
 </html>
