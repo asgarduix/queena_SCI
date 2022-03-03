@@ -566,14 +566,13 @@ var table01 = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-                {
+            {
             title: "存款性質",
             field: "存款性質",
             formatter: function(cell, formatterParams, onRendered) {
                 return "<a href='#'>" + cell.getValue() + "</a>"
             },
         },
-        { title: "存款性質", field: "存款性質" },
         { title: "存款銀行", field: "存款銀行" },
         { title: "存款銀行名稱", field: "存款銀行名稱" },
         { title: "帳號", field: "帳號" },
