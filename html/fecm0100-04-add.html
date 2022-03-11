@@ -472,7 +472,7 @@
                                 <span>短期票券維護</span>
                             </div>
                         </div>
-                        <!-- 票券代號/賣出單號/券戶代號/買入到期調度日 -->
+                        <!-- 票券代號/賣出單號/券戶代號 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
@@ -502,21 +502,13 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">券戶代號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="券戶代號" value="0081061華銀中山" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">買入到期調度日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="買入到期調度日" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="券戶代號" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 起日/迄日/共計/幣別 -->
+                        <!-- 起日/迄日/共計/買入到期調度日 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
@@ -546,15 +538,9 @@
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">幣別</div>
+                                        <div class="customize-form-title">買入到期調度日</div>
                                         <div class="customize-form-entry">
-                                            <select name="幣別" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="">NTD</option>
-                                                <option value="">USD</option>
-                                                <option value="">HKD</option>
-                                                <option value="">EUR</option>
-                                            </select>
+                                            <input type="date" name="買入到期調度日" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -569,11 +555,11 @@
                                         <div class="customize-form-entry">
                                             <select name="付息方式" id="" value="" title="" data-toggle="tooltip" data-placement="left">
                                                 <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="">二年</option>
-                                                <option value="">一年</option>
-                                                <option value="">半年</option>
-                                                <option value="">每季</option>
-                                                <option value="">每月</option>
+                                                <option value="">二年付息一次</option>
+                                                <option value="">每年付息一次</option>
+                                                <option value="">半年付息一次</option>
+                                                <option value="">每季付息一次</option>
+                                                <option value="">每月付息一次</option>
                                                 <option value="">不付息</option>
                                                 <option value="">其他</option>
                                             </select>
@@ -606,7 +592,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 保管情形/投資型態 -->
+                        <!-- 保管情形/投資型態/幣別/ -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
@@ -616,7 +602,8 @@
                                             <select name="保管情形" id="" value="" title="" data-toggle="tooltip" data-placement="left">
                                                 <option value="" disabled="" hidden="" selected="">請選擇</option>
                                                 <option value="">集保</option>
-                                                <option value="">遠銀保管</option>
+                                                <option value="">遠銀保管箱</option>
+                                                <option value="">美林證券</option>
                                                 <option value="">其他</option>
                                             </select>
                                         </div>
@@ -626,66 +613,15 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">投資型態</div>
                                         <div class="customize-form-entry">
-                                            <select name="投資型態" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="">短期投資</option>
-                                                <option value="">長期投資</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 票類/債券順位/交易種類/募集方式 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">票類</div>
-                                        <div class="customize-form-entry">
-                                            <select name="票類" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="">BA</option>
-                                                <option value="">CP2</option>
-                                                <option value="">NCD</option>
-                                                <option value="">TB</option>
-                                                <option value="">GB</option>
-                                            </select>
+                                            <input type="text" name="投資型態" value="短期投資" title="短期投資" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">債券順位</div>
+                                        <div class="customize-form-title">幣別</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="債券順位" value="0" title="0" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">交易種類</div>
-                                        <div class="customize-form-entry">
-                                            <select name="交易種類" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="">上市</option>
-                                                <option value="">上櫃</option>
-                                                <option value="">興櫃</option>
-                                                <option value="">其他</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">募集方式</div>
-                                        <div class="customize-form-entry">
-                                            <select name="募集方式" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="" disabled="" hidden="" selected="">請選擇</option>
-                                                <option value="">公開募集</option>
-                                                <option value="">私募</option>
-                                                <option value="">其他</option>
-                                            </select>
+                                            <input type="text" name="幣別" value="" title="" placeholder="" data-toggle="tooltip" data-placement="left" attr="readonly" disabled="">
                                         </div>
                                     </div>
                                 </div>
@@ -705,9 +641,24 @@
                                     <div class="customize-form-field customize-form-field-4 customize-form-field-delete"><button>刪除</button></div>
                                 </div>
                             </div>
-                            <!-- 票券批號/票券面額 -->
+                            <!-- 票類/票券批號/票據面額/交易種類 -->
                             <div class="customize-form-row">
                                 <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">票類</div>
+                                            <div class="customize-form-entry">
+                                                <select name="票類" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                    <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                    <option value="">(1)BA</option>
+                                                    <option value="">(2)CP2</option>
+                                                    <option value="">(3)NCD</option>
+                                                    <option value="">(4)TB</option>
+                                                    <option value="">(5)GB</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="customize-form-field customize-form-field-1">
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">票券批號</div>
@@ -718,15 +669,29 @@
                                     </div>
                                     <div class="customize-form-field customize-form-field-1">
                                         <div class="customize-field-inner">
-                                            <div class="customize-form-title">票券面額</div>
+                                            <div class="customize-form-title">票據面額</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="票券面額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                                <input type="text" name="票據面額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">交易種類</div>
+                                            <div class="customize-form-entry">
+                                                <select name="交易種類" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                    <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                    <option value="">上市</option>
+                                                    <option value="">上櫃</option>
+                                                    <option value="">興櫃</option>
+                                                    <option value="">其他</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 成本金額/到期金額 -->
+                            <!-- 成本金額/到期金額/債券順位/募集方式 -->
                             <div class="customize-form-row">
                                 <div class="customize-form-inner">
                                     <div class="customize-form-field customize-form-field-1">
@@ -745,24 +710,49 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- 利息所得/稅額/發票代號/發票人 -->
-                            <div class="customize-form-row">
-                                <div class="customize-form-inner">
                                     <div class="customize-form-field customize-form-field-1">
                                         <div class="customize-field-inner">
-                                            <div class="customize-form-title">利息所得</div>
+                                            <div class="customize-form-title">債券順位</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="利息所得" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                                <select name="債券順位" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                    <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="customize-form-field customize-form-field-1">
                                         <div class="customize-field-inner">
+                                            <div class="customize-form-title">募集方式</div>
+                                            <div class="customize-form-entry">
+                                                <select name="募集方式" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                    <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                    <option value="">公開募集</option>
+                                                    <option value="">私募</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 稅額/利息所得/發票代號/發票人 -->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
                                             <div class="customize-form-title">稅額</div>
                                             <div class="customize-form-entry">
                                                 <input type="text" name="稅額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">利息所得</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="利息所得" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
                                             </div>
                                         </div>
                                     </div>
@@ -793,9 +783,9 @@
                                             <div class="customize-form-entry">
                                                 <select name="關係人註" id="" value="" title="" data-toggle="tooltip" data-placement="left">
                                                     <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                    <option value="">非關係人</option>
                                                     <option value="">子母公司關係人</option>
                                                     <option value="">非子母公司關係人</option>
-                                                    <option value="">非關係人</option>
                                                     <option value="">其他</option>
                                                 </select>
                                             </div>
@@ -847,9 +837,24 @@
                                     <div class="customize-form-field customize-form-field-4 customize-form-field-delete"><button>刪除</button></div>
                                 </div>
                             </div>
-                            <!-- 票券批號/票券面額 -->
+                            <!-- 票類/票券批號/票據面額/交易種類 -->
                             <div class="customize-form-row">
                                 <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">票類</div>
+                                            <div class="customize-form-entry">
+                                                <select name="票類" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                    <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                    <option value="">(1)BA</option>
+                                                    <option value="">(2)CP2</option>
+                                                    <option value="">(3)NCD</option>
+                                                    <option value="">(4)TB</option>
+                                                    <option value="">(5)GB</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="customize-form-field customize-form-field-1">
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">票券批號</div>
@@ -860,15 +865,29 @@
                                     </div>
                                     <div class="customize-form-field customize-form-field-1">
                                         <div class="customize-field-inner">
-                                            <div class="customize-form-title">票券面額</div>
+                                            <div class="customize-form-title">票據面額</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="票券面額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                                <input type="text" name="票據面額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">交易種類</div>
+                                            <div class="customize-form-entry">
+                                                <select name="交易種類" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                    <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                    <option value="">上市</option>
+                                                    <option value="">上櫃</option>
+                                                    <option value="">興櫃</option>
+                                                    <option value="">其他</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 成本金額/到期金額 -->
+                            <!-- 成本金額/到期金額/債券順位/募集方式 -->
                             <div class="customize-form-row">
                                 <div class="customize-form-inner">
                                     <div class="customize-form-field customize-form-field-1">
@@ -887,24 +906,49 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- 利息所得/稅額/發票代號/發票人 -->
-                            <div class="customize-form-row">
-                                <div class="customize-form-inner">
                                     <div class="customize-form-field customize-form-field-1">
                                         <div class="customize-field-inner">
-                                            <div class="customize-form-title">利息所得</div>
+                                            <div class="customize-form-title">債券順位</div>
                                             <div class="customize-form-entry">
-                                                <input type="text" name="利息所得" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                                <select name="債券順位" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                    <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                    <option value="">1</option>
+                                                    <option value="">2</option>
+                                                    <option value="">3</option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="customize-form-field customize-form-field-1">
                                         <div class="customize-field-inner">
+                                            <div class="customize-form-title">募集方式</div>
+                                            <div class="customize-form-entry">
+                                                <select name="募集方式" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                    <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                    <option value="">公開募集</option>
+                                                    <option value="">私募</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 稅額/利息所得/發票代號/發票人 -->
+                            <div class="customize-form-row">
+                                <div class="customize-form-inner">
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
                                             <div class="customize-form-title">稅額</div>
                                             <div class="customize-form-entry">
                                                 <input type="text" name="稅額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="customize-form-field customize-form-field-1">
+                                        <div class="customize-field-inner">
+                                            <div class="customize-form-title">利息所得</div>
+                                            <div class="customize-form-entry">
+                                                <input type="text" name="利息所得" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr="money">
                                             </div>
                                         </div>
                                     </div>
@@ -935,9 +979,9 @@
                                             <div class="customize-form-entry">
                                                 <select name="關係人註" id="" value="" title="" data-toggle="tooltip" data-placement="left">
                                                     <option value="" disabled="" hidden="" selected="">請選擇</option>
+                                                    <option value="">非關係人</option>
                                                     <option value="">子母公司關係人</option>
                                                     <option value="">非子母公司關係人</option>
-                                                    <option value="">非關係人</option>
                                                     <option value="">其他</option>
                                                 </select>
                                             </div>
@@ -1017,22 +1061,20 @@
 let table01Data = [{
         id: "a1",
         筆數: "4",
-        賣出單號: "賣出單號",
-        票券商代號: "票券商代號",
-        起日: "起日",
-        訖日: "起日",
-        成本值: "成本值",
-        到期金額: "到期金額",
+        票券商代號: "設計",
+        賣出單號: "設計",
+        起訖日: "設計",
+        成本值: "設計",
+        到期金額: "設計",
     },
     {
         id: "a2",
         筆數: "3",
-        賣出單號: "賣出單號",
-        票券商代號: "票券商代號",
-        起日: "起日",
-        訖日: "起日",
-        成本值: "成本值",
-        到期金額: "到期金額",
+        票券商代號: "設計",
+        賣出單號: "設計",
+        起訖日: "設計",
+        成本值: "設計",
+        到期金額: "設計",
     },
 ]
 
@@ -1077,17 +1119,16 @@ var table = new Tabulator("#table01", {
             },
             // formatter: "link",
         },
-        { title: "票券商代號", field: "票券商代號" },
         {
-            title: "賣出單號",
-            field: "賣出單號",
+            title: "票券商代號",
+            field: "票券商代號",
             formatter: function(cell, formatterParams, onRendered) {
                 return "<a href='#'>" + cell.getValue() + "</a>"
             },
             // formatter: "link",
         },
-        { title: "起日", field: "起日" },
-        { title: "訖日", field: "訖日" },
+        { title: "賣出單號", field: "賣出單號" },
+        { title: "起訖日", field: "起訖日" },
         { title: "成本值", field: "成本值" },
         { title: "到期金額", field: "到期金額" },
     ],

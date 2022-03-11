@@ -183,26 +183,6 @@
                                 </div>
                             </div>
                         </div>
-                         <!-- unittab -->
-                         <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board detail-board-unittab">
-                                <!-- unitTab -->
-                                <div class="content-component content-unittab">
-                                    <ul>
-                                        <li><a href="fedm0500-01-query.html" class="unittab-active">單筆查詢</a></li>
-                                        <li><a href="fedm0500-01-1-find.html">查詢</a></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                         <!-- query -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -518,111 +498,49 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-    let table01Data = [{
-            id: "a1",
-            title: "印鑑代號", field: "印鑑代號" ,
-            title: "印鑑分類", field: "印鑑分類" ,
-            title: "印鑑名稱", field: "印鑑名稱" ,
-            title: "英文名稱", field: "英文名稱" ,
-            title: "使用狀況", field: "使用狀況" ,
-            title: "生效日期", field: "生效日期" ,
-            title: "停用日期", field: "停用日期" ,
-            title: "建檔日期", field: "建檔日期" ,
-            title: "更新日期", field: "更新日期" ,
-            title: "停用原因", field: "停用原因" ,
-            title: "印鑑影像檔", field: "圖檔" ,
-        },
-        {
-            id: "a2",
-            title: "印鑑代號", field: "印鑑代號" ,
-            title: "印鑑分類", field: "印鑑分類" ,
-            title: "印鑑名稱", field: "印鑑名稱" ,
-            title: "英文名稱", field: "英文名稱" ,
-            title: "使用狀況", field: "使用狀況" ,
-            title: "生效日期", field: "生效日期" ,
-            title: "停用日期", field: "停用日期" ,
-            title: "建檔日期", field: "建檔日期" ,
-            title: "更新日期", field: "更新日期" ,
-            title: "停用原因", field: "停用原因" ,
-            title: "印鑑影像檔", field: "圖檔" ,
-        },
-        {
-            id: "a3",
-            title: "印鑑代號", field: "印鑑代號" ,
-            title: "印鑑分類", field: "印鑑分類" ,
-            title: "印鑑名稱", field: "印鑑名稱" ,
-            title: "英文名稱", field: "英文名稱" ,
-            title: "使用狀況", field: "使用狀況" ,
-            title: "生效日期", field: "生效日期" ,
-            title: "停用日期", field: "停用日期" ,
-            title: "建檔日期", field: "建檔日期" ,
-            title: "更新日期", field: "更新日期" ,
-            title: "停用原因", field: "停用原因" ,
-            title: "印鑑影像檔", field: "圖檔" ,
-        },
-        {
-            id: "a4",
-            title: "印鑑代號", field: "印鑑代號" ,
-            title: "印鑑分類", field: "印鑑分類" ,
-            title: "印鑑名稱", field: "印鑑名稱" ,
-            title: "英文名稱", field: "英文名稱" ,
-            title: "使用狀況", field: "使用狀況" ,
-            title: "生效日期", field: "生效日期" ,
-            title: "停用日期", field: "停用日期" ,
-            title: "建檔日期", field: "建檔日期" ,
-            title: "更新日期", field: "更新日期" ,
-            title: "停用原因", field: "停用原因" ,
-            title: "印鑑影像檔", field: "圖檔" ,
-        },
-    ]
-    
-    var table01 = new Tabulator("#table01", {
-        data: table01Data,
-        layout: "fitColumns",
-        height: "255px",
-        pagination: "local",
-        paginationSize: 5,
-        paginationSizeSelector: [5, 10, 30, 50, true],
-        movableColumns: true,
-        resizableRows: true,
-        tooltips: true,
-        tooltipsHeader: true,
-        tooltipGenerationMode: "hover",
-        selectable: true,
-        columns: [{
-                formatter: "rowSelection",
-                titleFormatter: "rowSelection",
-                headerHozAlign: "center",
-                hozAlign: "center",
-                headerSort: false,
-                maxWidth: 30,
-                minWidth: 30,
-                cellClick: function(e, cell) {
-                    cell.getRow().toggleSelect();
-                }
-            },
-                    {
-                title: "印鑑代號",
-                field: "印鑑代號",
-                formatter: function(cell, formatterParams, onRendered) {
-                    return "<a href='#'>" + cell.getValue() + "</a>"
-                },
-            },
-            { title: "印鑑分類", field: "印鑑分類" },
-            { title: "印鑑名稱", field: "印鑑名稱" },
-            { title: "英文名稱", field: "英文名稱" },
-            { title: "使用狀況", field: "使用狀況" },
-            { title: "生效日期", field: "生效日期" },
-            { title: "停用日期", field: "停用日期" },
-            { title: "建檔日期", field: "建檔日期" },
-            { title: "更新日期", field: "更新日期" },
-            { title: "停用原因", field: "停用原因" },
-            { title: "印鑑影像檔", field: "圖檔"  },
-        ],
-    });
-    // 選擇預設勾選row
-    // table.selectRow("a1");
-    // 使用filter能精準指定欄位
-    //table.selectRow(table.setFilter("id","=","a1"));
+var table01Data = [{
+    checkbox: "checkbox",
+    印鑑代號: "設計文字",
+    印鑑分類: "設計文字",
+    印鑑名稱: "設計文字",
+    英文名稱: "設計文字",
+    使用狀況: "設計文字",
+    生效日期: "設計文字",
+    停用日期: "設計文字",
+    建檔日期: "設計文字",
+    更新日期: "設計文字",
+    停用原因: "設計文字",
+    印鑑影像檔: "圖檔"
+}, ];
+
+var table01 = new Tabulator("#table01", {
+    data: table01Data,
+    autoColumns: true,
+    layout: "fitColumns",
+    height: "255px",
+    pagination: "local",
+    paginationSize: 5,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [
+        { title: "checkbox", field: "checkbox" },
+        { title: "印鑑代號", field: "印鑑代號" },
+        { title: "印鑑分類", field: "印鑑分類" },
+        { title: "印鑑名稱", field: "印鑑名稱" },
+        { title: "英文名稱", field: "英文名稱" },
+        { title: "使用狀況", field: "使用狀況" },
+        { title: "生效日期", field: "生效日期" },
+        { title: "停用日期", field: "停用日期" },
+        { title: "建檔日期", field: "建檔日期" },
+        { title: "更新日期", field: "更新日期" },
+        { title: "停用原因", field: "停用原因" },
+        { title: "印鑑影像檔", field: "圖檔" },
+    ],
+});
 </script>
 </html>
