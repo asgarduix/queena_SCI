@@ -223,7 +223,7 @@
                                                             <option value="">華銀萬家立帳報表</option>
                                                             <option value="" selected>華銀萬家入帳報表</option>
                                                             <option value="">華銀全方位立帳報表</option>
-                                                            <option value="">華銀全方位入帳報表</option>
+                                                            <option value="" selected>華銀全方位入帳報表</option>
                                                             <option value="">華銀全方位盤點報表</option>
                                                         </select>
                                                     </div>
@@ -240,7 +240,16 @@
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">銷帳單位</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="銷帳單位" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="銷帳單位" value="007666" title="007666" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="query-field query-double-datepicker">
@@ -259,10 +268,21 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-input">
+                                        <div class="query-field query-selector">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">入帳對象</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="入帳對象" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="信評機構" id="">
+                                                        <option value="" selected>全部</option>
+                                                        <option value=""></option>
+                                                        <option value="">/未收率績效表</option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -286,6 +306,24 @@
                                                         <li><input type="radio" id="rd01" name="財務用"><label for="rd01">財務用</label></li>
                                                         <li><input type="radio" id="rd02" name="會計用"><label for="rd02">會計用</label></li>
                                                     </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">銀行帳號</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="銀行帳號" id="">
+                                                        <option value="">條碼全部</option>
+                                                        <option value="">統一超商</option>
+                                                        <option value="">全家超商</option>
+                                                        <option value="">OK超商</option>
+                                                        <option value="">萊爾富超商</option>
+                                                        <option value="">全國農金</option>
+                                                        <option value="">華銀全方位</option>
+                                                        <option value="">非華銀通路</option>
+                                                        <option value="">條碼(全部對帳單)</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
