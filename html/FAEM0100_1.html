@@ -351,7 +351,7 @@
                                             <div class="table-func-page">頁碼</div>
                                         </div>
                                     </div>
-                                    <div id="table01"></div>
+                                    <div id="table05"></div>
                                     <div class="table-footer">table-footer</div>
                                 </div>
                             </div>
@@ -598,9 +598,9 @@ let table05Data = [{
     應收保費: "設計文字",
     實收保費: "設計文字",
     不明存款序號: "設計文字",
-    華產督導組長: "設計文字",
-    華產服務人員: "設計文字",
-    臨櫃代收人員: "設計文字",
+    華產督導組長: "設計文字"+"123",
+    華產服務人員: "設計文字"+"123",
+    臨櫃代收人員: "設計文字"+"123",
     收費序號: "設計文字",
     繳費次數: "設計文字",
 }, ];
@@ -630,15 +630,15 @@ var table05 = new Tabulator("#table05", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "銀行帳號", field: "銀行帳號" },
-        { title: "交易時間", field: "交易時間" },
-        { title: "交易序號", field: "交易序號" },
-        { title: "交易金額", field: "交易金額" },
+        { title: "分行代號", field: "分行代號" },
+        { title: "應收保費", field: "應收保費" },
+        { title: "實收保費", field: "實收保費" },
+        { title: "不明存款序號", field: "不明存款序號" },
+        { title: "華產督導組長", field: "華產督導組長" },
+        { title: "華產服務人員", field: "華產服務人員" },
+        { title: "臨櫃代收人員", field: "臨櫃代收人員" },
         { title: "收費序號", field: "收費序號" },
-        { title: "流水號", field: "流水號" },
-        { title: "幣別", field: "幣別" },
-        { title: "總筆數", field: "總筆數" },
-        { title: "請款總金額", field: "請款總金額" },
+        { title: "繳費次數", field: "繳費次數" },
     ],
 });
 // 選擇預設勾選row
