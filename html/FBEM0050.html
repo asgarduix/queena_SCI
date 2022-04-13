@@ -207,10 +207,8 @@
                                                 <div class="query-field-item query-field-title">來源選擇</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <select name="信評機構" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="">便利商店</option>
-                                                        <option value=""></option>
-                                                        <option value=""></option>
+                                                        <option value="" selected>萬家</option>
+                                                        <option value="">全方位</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -515,16 +513,15 @@
 <script>
 let table01Data = [{
     id: "b1",
-    總行代碼: "設計文字",
-    分行代碼: "設計文字",
-    名稱: "設計文字",
-    簡稱: "設計文字",
-    地址: "設計文字",
-    銀行統編: "設計文字",
-    電話號碼: "設計文字",
-    建檔日期: "設計文字",
-    更新日期: "設計文字",
-    作業人員: "設計文字"
+    分行代號: "設計文字",
+    應收保費: "設計文字",
+    實收保費: "設計文字",
+    不明存款序號: "設計文字",
+    華產督導組長: "設計文字",
+    華產服務人員: "設計文字",
+    臨櫃代收人員: "設計文字",
+    收費序號: "設計文字",
+    繳費次數: "設計文字",
 }, ];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
@@ -552,16 +549,15 @@ var table01 = new Tabulator("#table01", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "總行代碼", field: "總行代碼" },
-        { title: "分行代碼", field: "分行代碼" },
-        { title: "名稱", field: "名稱" },
-        { title: "簡稱", field: "簡稱" },
-        { title: "地址", field: "地址" },
-        { title: "銀行統編", field: "銀行統編" },
-        { title: "電話號碼", field: "電話號碼" },
-        { title: "建檔日期", field: "建檔日期" },
-        { title: "更新日期", field: "更新日期" },
-        { title: "作業人員", field: "作業人員" },
+        { title: "分行代號", field: "分行代號" },
+        { title: "應收保費", field: "應收保費" },
+        { title: "實收保費", field: "實收保費" },
+        { title: "不明存款序號", field: "不明存款序號" },
+        { title: "華產督導組長", field: "華產督導組長" },
+        { title: "華產服務人員", field: "華產服務人員" },
+        { title: "臨櫃代收人員", field: "臨櫃代收人員" },
+        { title: "收費序號", field: "收費序號" },
+        { title: "繳費次數", field: "繳費次數" },
     ],
 });
 // 選擇預設勾選row

@@ -486,7 +486,7 @@
                     <div class="customize-form">
                         <div class="customize-form-row">
                             <div class="customize-form-header">
-                                <span>押標金資料維護</span>
+                                <span>押標金資料</span>
                             </div>
                         </div>
                         <!-- 列帳單位/付款日期/序號 -->
@@ -496,7 +496,12 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">列帳單位</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="列帳單位" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                                <div class="customize-form-entry-col customize-form-entry-4">
+                                                    <input type="text" name="列帳單位" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                </div>
+                                                <div class="customize-form-entry-col customize-form-entry-6">
+                                                    <input type="text" name="列帳單位" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
+                                                </div>
                                         </div>
                                     </div>
                                 </div>
@@ -567,20 +572,20 @@
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-2">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">標案險種</div>
-                                            <div class="customize-form-entry">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">標案險種</div>
+                                        <div class="customize-form-entry">
                                                 <select name="標案險種" id="" value="" title="" data-toggle="tooltip" data-placement="left">
                                                     <option value="">全部</option>
                                                     <option value="">車任險</option>
                                                     <option value="">水險</option>
                                                     <option value="">火險</option>
-                                                    <option value="" selected>意外險</option>
+                                                    <option value="">意外險</option>
                                                     <option value="">強制險</option>
                                                     <option value="">健康險</option>
                                                 </select>
-                                            </div>
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -611,18 +616,18 @@
                         <!-- 受款人/票號 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-2">
+                                <div class="customize-form-field customize-form-field-3">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">受款人</div>
                                         <div class="customize-form-entry"><input type="text" name="受款人" value="" title="" placeholder="請輸入值"></div>
                                     </div>
                                 </div>
-                                    <div class="customize-form-field customize-form-field-2">
+                                <div class="customize-form-field customize-form-field-1">
                                         <div class="customize-field-inner">
                                             <div class="customize-form-title">票號</div>
                                             <div class="customize-form-entry"><input type="text" name="票號" value="" title="" placeholder="請輸入值"></div>
                                         </div>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- 繳納方式/受款銀行/受款帳號 -->
@@ -632,13 +637,13 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">繳納方式</div>
                                         <div class="customize-form-entry">
-                                            <select name="繳納方式" id="" value="" title="" data-toggle="tooltip" data-placement="left">
-                                                <option value="">銀行本票</option>
-                                                <option value="">支票</option>
-                                                <option value="">匯款</option>
-                                                <option value="">現金</option>
-                                                <option value="">其他</option>
-                                            </select>
+                                                <select name="繳納方式" id="" value="" title="" data-toggle="tooltip" data-placement="left">
+                                                    <option value="">銀行本票</option>
+                                                    <option value="">支票</option>
+                                                    <option value="">匯款</option>
+                                                    <option value="">現金</option>
+                                                    <option value="">其他</option>
+                                                </select>
                                         </div>
                                     </div>
                                 </div>
@@ -663,25 +668,23 @@
                                 </div>
                             </div>
                         </div>
-                         <!-- 繳納方式/付款銀行/付款帳號 -->
-                         <div class="customize-form-row">
+                        <!-- 付款銀行/付款帳號 -->
+                        <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">&nbsp;</div>
-                                        <div class="customize-form-entry">
-                                            &nbsp;
-                                        </div>
+                                        <div class="customize-form-title">&emsp;</div>
+                                        <div class="customize-form-entry">&emsp;</div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-form-title">付款銀行</div>
                                     <div class="customize-form-entry">
                                             <div class="customize-form-entry-col customize-form-entry-4">
-                                                <input type="text" name="付款銀行" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                                <input type="text" name="開票銀行" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
                                             </div>
                                             <div class="customize-form-entry-col customize-form-entry-6">
-                                                <input type="text" name="受款銀行" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
+                                                <input type="text" name="開票銀行" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
                                             </div>
                                     </div>
                                 </div>
@@ -689,26 +692,24 @@
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">付款帳號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="付款帳號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="帳號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 印鑑檔描述 -->
+                        <!-- 備註 -->
                         <div class="customize-form-row">
-                            <div class="customize-form-desc">
                                 <div class="customize-field-inner">
                                     <div class="customize-form-title">備註</div>
                                     <div class="customize-form-entry">
                                     <div class="customize-form-desc-item customize-form-desc-textarea"><textarea name="" id="" cols="30" rows="2"></textarea></div></div>
                                 </div>
-                            </div>
-                        </div>
+                        </div> 
                     </div>
                     <!-- customize-form 2 -->
                     <div class="customize-form">
-                        <!-- 繳納方式/受款銀行/受款帳號 -->
+                        <!-- 申請單位/申請人/主管 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
