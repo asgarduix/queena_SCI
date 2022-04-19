@@ -594,15 +594,11 @@ table01.selectRow("b1");
 <script>
 let table05Data = [{
     id: "b1",
-    分行代號: "設計文字",
-    應收保費: "設計文字",
-    實收保費: "設計文字",
-    不明存款序號: "設計文字",
-    華產督導組長: "設計文字"+"123",
-    華產服務人員: "設計文字"+"123",
-    臨櫃代收人員: "設計文字"+"123",
     收費序號: "設計文字",
-    繳費次數: "設計文字",
+    分行代號: "設計文字",
+    交易日期: "設計文字",
+    收費序號: "設計文字",
+    應收保費: "設計文字"+"123",
 }, ];
 var table05 = new Tabulator("#table05", {
     data: table05Data,
@@ -630,15 +626,11 @@ var table05 = new Tabulator("#table05", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "分行代號", field: "分行代號" },
-        { title: "應收保費", field: "應收保費" },
-        { title: "實收保費", field: "實收保費" },
-        { title: "不明存款序號", field: "不明存款序號" },
-        { title: "華產督導組長", field: "華產督導組長" },
-        { title: "華產服務人員", field: "華產服務人員" },
-        { title: "臨櫃代收人員", field: "臨櫃代收人員" },
         { title: "收費序號", field: "收費序號" },
-        { title: "繳費次數", field: "繳費次數" },
+        { title: "分行代號", field: "分行代號" },
+        { title: "交易日期", field: "交易日期" },
+        { title: "收費序號", field: "收費序號" },
+        { title: "應收保費", field: "應收保費" },
     ],
 });
 // 選擇預設勾選row
