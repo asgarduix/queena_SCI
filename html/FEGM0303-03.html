@@ -475,7 +475,7 @@
             <form action="">
                 <div class="dialog-header">
                     <div class="dialog-header-inner">
-                        <div class="dialog-header-item dialog-title">履約保證金新增</div>
+                        <div class="dialog-header-item dialog-title">履約保證金修改</div>
                         <div class="dialog-header-item dialog-cancel">
                             <a href="#"><span class="material-icons">cancel</span></a>
                         </div>
@@ -489,7 +489,7 @@
                                 <span>押標金資料維護</span>
                             </div>
                         </div> -->
-                        <!-- 列帳單位/付款日期/序號 -->
+                        <!-- 列帳單位/收款日期/序號 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-2">
@@ -505,9 +505,9 @@
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">付款日期</div>
+                                        <div class="customize-form-title">收款日期</div>
                                         <div class="customize-form-entry">
-                                            <input type="date" name="付款日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                            <input type="date" name="收款日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
@@ -518,6 +518,20 @@
                                             <input type="text" name="序號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 投標廠商 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-field customize-form-field-4">
+                                <div class="customize-form-title">投標廠商</div>
+                                <div class="customize-form-entry">
+                                        <div class="customize-form-entry-col customize-form-entry-4">
+                                            <input type="text" name="投標廠商" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
+                                        </div>
+                                        <div class="customize-form-entry-col customize-form-entry-6">
+                                            <input type="text" name="投標廠商" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -532,7 +546,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 開標日期/險種/出單單位 -->
+                        <!-- 開標日期/結標日期 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
@@ -545,93 +559,47 @@
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">險種</div>
+                                        <div class="customize-form-title">結標日期</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="險種" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">出單單位</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="出單單位" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="date" name="結標日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 保單號碼/保單序號 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">保單號碼/案號</div>
-                                        <div class="customize-form-entry"><input type="text" name="保單號碼" value="" title="" placeholder="請輸入值"></div>
-                                    </div>
-                                </div>
-                                    <div class="customize-form-field customize-form-field-1">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">保單序號</div>
-                                            <div class="customize-form-entry"><input type="text" name="結案序號" value="" title="" placeholder="請輸入值"></div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <!-- 金額/保險期間/原押標金單號 -->
+                        <!-- 押標金/信用證明 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">金額</div>
+                                        <div class="customize-form-title">押標金</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="金額" value="123" title="123" attr="money" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">保險期間</div>
-                                        <div class="customize-form-entry">
-                                            <div class="customize-form-entry-container">
-                                                <div class="customize-form-entry-col customize-form-entry-4">
-                                                    <input type="date" name="常駐金日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
-                                                </div>
-                                                <div class="customize-form-entry-col customize-form-entry-4">
-                                                    <input type="date" name="常駐金日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
-                                                </div>
-                                            </div>
+                                            <input type="text" name="押標金" value="123" title="123" attr="money" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">原押標金單號</div>
-                                        <div class="customize-form-entry"><input type="text" name="原押標金單號" value="" title="" placeholder="請輸入值"></div>
+                                        <div class="customize-form-title">信用證明</div>
+                                        <div class="customize-form-entry">
+                                            <ul>
+                                                <li><input type="radio" id="frd01" name="信用證明"><label for="frd01">有</label></li>
+                                                <li><input type="radio" id="frd02" name="作業項目"><label for="frd02">無</label></li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 受款人/票號 -->
+                        <!-- 戶名/繳納方式/票號 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-3">
+                                <div class="customize-form-field customize-form-field-2">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">受款人</div>
-                                        <div class="customize-form-entry"><input type="text" name="受款人" value="" title="" placeholder="請輸入值"></div>
+                                        <div class="customize-form-title">戶名</div>
+                                        <div class="customize-form-entry"><input type="text" name="戶名" value="" title="" placeholder="請輸入值"></div>
                                     </div>
                                 </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                <div class="customize-field-inner">
-                                    <div class="customize-form-title">票號</div>
-                                    <div class="customize-form-entry"><input type="text" name="票號" value="" title="" placeholder="請輸入值"></div>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                        <!-- 繳納方式/受款銀行/受款帳號 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">繳納方式</div>
@@ -646,8 +614,21 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">票號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="票號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 開票銀行/帳號 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-form-title">受款銀行</div>
+                                    <div class="customize-form-title">開票銀行</div>
                                     <div class="customize-form-entry">
                                             <div class="customize-form-entry-col customize-form-entry-4">
                                                 <input type="text" name="受款銀行" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
@@ -657,54 +638,20 @@
                                             </div>
                                     </div>
                                 </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">受款帳號</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="受款帳號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 繳納方式/付款銀行/付款帳號 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">&nbsp;</div>
-                                            <div class="customize-form-entry">
-                                                &nbsp;
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="customize-form-field customize-form-field-2">
-                                    <div class="customize-form-title">付款銀行</div>
-                                    <div class="customize-form-entry">
-                                            <div class="customize-form-entry-col customize-form-entry-4">
-                                                <input type="text" name="付款銀行" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
-                                            </div>
-                                            <div class="customize-form-entry-col customize-form-entry-6">
-                                                <input type="text" name="受款銀行" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
-                                            </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-field-inner">
-                                        <div class="customize-form-title">付款帳號</div>
+                                        <div class="customize-form-title">帳號</div>
                                         <div class="customize-form-entry">
-                                            <input type="text" name="付款帳號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                            <input type="text" name="帳號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- 備註 -->
+                        <!-- 備註/可郵寄日 -->
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-4">
+                                <div class="customize-form-field customize-form-field-3">
                                     <div class="customize-field-inner">
                                         <div class="customize-form-title">備註</div>
                                         <div class="customize-form-entry"><input type="text" name="備註" value="" title="" placeholder="請輸入值"></div>
@@ -712,7 +659,30 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- 申請單位/申請人/主管 -->
+                    </div>
+                    <!-- customize-form2 -->
+                    <div class="customize-form">
+                        <!-- 申請日期/申請單號/主管 -->
+                        <div class="customize-form-row">
+                            <div class="customize-form-inner">
+                                <div class="customize-form-field customize-form-field-1">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">申請日期</div>
+                                        <div class="customize-form-entry">
+                                            <input type="date" name="開標日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="customize-form-field customize-form-field-2">
+                                    <div class="customize-field-inner">
+                                        <div class="customize-form-title">申請單號</div>
+                                        <div class="customize-form-entry">
+                                            <input type="text" name="申請單號" value="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="customize-form-row">
                             <div class="customize-form-inner">
                                 <div class="customize-form-field customize-form-field-1">
@@ -740,77 +710,11 @@
                                 <div class="customize-form-field customize-form-field-1">
                                     <div class="customize-form-title">主管</div>
                                     <div class="customize-form-entry">
-                                            <div class="customize-form-entry-col customize-form-entry-3">
+                                        <div class="customize-form-entry-col customize-form-entry-3">
                                                 <input type="text" name="主管" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
-                                            </div>
-                                            <div class="customize-form-entry-col customize-form-entry-7">
+                                        </div>
+                                        <div class="customize-form-entry-col customize-form-entry-7">
                                                 <input type="text" name="主管" value="" title="" data-toggle="tooltip" data-placement="left" placeholder="" disabled="" attr="readonly">
-                                            </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 可郵寄日 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">可郵寄日</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="可郵寄日" value="" placeholder="" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 得標日期/結案日期/預計結案日期 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">得標日期</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="得標日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">結案日期</div>
-                                        <div class="customize-form-entry">
-                                            <input type="date" name="結案日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-2">
-                                        <div class="customize-field-inner">
-                                            <div class="customize-form-title">預計結案日期</div>
-                                            <div class="customize-form-entry">
-                                                    <input type="date" name="預計結案日期" value="" placeholder="" data-toggle="tooltip" data-placement="left">
-                                            </div>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- customize-form 2 -->
-                    <div class="customize-form">
-                        <!-- 金額/保險期間/原押標金單號 -->
-                        <div class="customize-form-row">
-                            <div class="customize-form-inner">
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">差額保險金</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="差額保險金" value="123" title="123" attr="money" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="customize-form-field customize-form-field-1">
-                                    <div class="customize-field-inner">
-                                        <div class="customize-form-title">押標金金額</div>
-                                        <div class="customize-form-entry">
-                                            <input type="text" name="押標金金額" value="123" title="123" attr="money" data-toggle="tooltip" data-placement="left" placeholder="請輸入值">
                                         </div>
                                     </div>
                                 </div>
@@ -848,5 +752,115 @@
 <script src="js/pg.js"></script>
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
+<script>
+let table01Data = [{
+    id: "b1",
+    開標日期: "設計文字",
+    標案名稱: "設計文字",
+    付款日: "設計文字",
+    支付對象: "設計文字",
+    申請人: "設計文字",
+    主管: "設計文字",
+    繳納方式: "設計文字",
+    結標日: "設計文字",
+}, ];
+var table01 = new Tabulator("#table01", {
+    data: table01Data,
+    //autoColumns: true,
+    layout: "fitColumns",
+    height: "255px",
+    pagination: "local",
+    paginationSize: 5,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+        { title: "開標日期", field: "開標日期" },
+        { title: "標案名稱", field: "標案名稱" },
+        { title: "付款日", field: "付款日" },
+        { title: "支付對象", field: "支付對象" },
+        { title: "申請人", field: "申請人" },
+        { title: "主管", field: "主管" },
+        { title: "繳納方式", field: "繳納方式" },
+        { title: "結標日", field: "結標日" },
+    ],
+});
+// 選擇預設勾選row
+table01.selectRow("b1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
+</script>
+
+<!-- tabulator header變更為上下兩排呈現 -->
+<script>
+let table05Data = [{
+    id: "b1",
+    銀行帳號: "設計文字",
+    交易時間: "設計文字",
+    交易序號: "設計文字",
+    交易金額: "設計文字",
+    收費序號: "設計文字",
+    流水號: "設計文字",
+    幣別: "設計文字",
+    總筆數: "設計文字",
+    請款總金額: "設計文字",
+}, ];
+var table05 = new Tabulator("#table05", {
+    data: table05Data,
+    //autoColumns: true,
+    layout: "fitColumns",
+    height: "255px",
+    pagination: "local",
+    paginationSize: 5,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+        { title: "銀行帳號", field: "銀行帳號" },
+        { title: "交易時間", field: "交易時間" },
+        { title: "交易序號", field: "交易序號" },
+        { title: "交易金額", field: "交易金額" },
+        { title: "收費序號", field: "收費序號" },
+        { title: "流水號", field: "流水號" },
+        { title: "幣別", field: "幣別" },
+        { title: "總筆數", field: "總筆數" },
+        { title: "請款總金額", field: "請款總金額" },
+    ],
+});
+// 選擇預設勾選row
+table05.selectRow("b1");
+// 使用filter能精準指定欄位
+//table.selectRow(table.setFilter("id","=","a1"));
+</script>
 
 </html>
