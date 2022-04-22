@@ -46,7 +46,7 @@
                     <div class="menu-list">
                         <ul>
                             <li>
-                                <a href="#" class="menu-list-active">
+                                <a href="fadm0400-tab3-01-query.html" class="menu-list-active">
                                     <span>FADM0400</span>
                                     <span>繳費簽收</span>
                                 </a>
@@ -142,7 +142,7 @@
                                     <ul>
                                         <li><a href="#">維護作業</a></li>
                                         <li><a href="#">列印作業</a></li>
-                                        <li><a href="#" class="unittab-active">臨櫃繳費</a></li>
+                                        <li><a href="fadm0400-tab3-01-query.html" class="unittab-active">臨櫃繳費</a></li>
                                         <li></li>
                                         <li></li>
                                         <li></li>
@@ -160,19 +160,18 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 繳費資料 -->
+                                    <!-- 簽收日/要保號碼 -->
                                     <div class="query-row">
-                                        <div class="query-field query-selector">
+                                        <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">繳費資料</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <select name="信評機構" id="">
-                                                        <option value="" disabled selected hidden>請選擇</option>
-                                                        <option value="" selected="">保單資料</option>
-                                                        <option value="">現金資料</option>
-                                                        <option value="">票據資料</option>
-                                                    </select>
-                                                </div>
+                                                <div class="query-field-item query-field-title">簽收日</div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="簽收日" title="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">要保號碼</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="要保號碼" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -188,8 +187,8 @@
                                     <div class="content-btn-main">
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-add"><span>新增</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-query" onclick="location.href='fadm0400-tab3-01-query.html'"><span>查詢</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-add" onclick="location.href='fadm0400-tab3-02-add.html'"><span>新增</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li>
                                         </ul>
@@ -206,12 +205,16 @@
                                 <div class="content-component content-label">
                                     <div class="label-inner">
                                         <div class="label-item">
-                                            <div class="label-title">保單金額合計</div>
-                                            <div class="label-content label-content-counter" attr="money">0</div>
+                                            <div class="label-title">應收保費合計</div>
+                                            <div class="label-content label-content-counter">3,000</div>
                                         </div>
                                         <div class="label-item">
-                                            <div class="label-title">保單件數合計</div>
-                                            <div class="label-content label-content-counter">0</div>
+                                            <div class="label-title">現金合計</div>
+                                            <div class="label-content label-content-counter">1,000</div>
+                                        </div>
+                                        <div class="label-item">
+                                            <div class="label-title">支票合計</div>
+                                            <div class="label-content label-content-counter">2,000</div>
                                         </div>
                                     </div>
                                 </div>
@@ -246,7 +249,7 @@
                                         </div>
                                     </div>
                                     <div id="table01"></div>
-                                    <div class="table-footer">footer</div>
+                                    <div class="table-footer"></div>
                                 </div>
                             </div>
                         </div>
