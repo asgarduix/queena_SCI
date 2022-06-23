@@ -1434,7 +1434,6 @@ a.menu-active .menu-bar {
     margin: 0;
     padding: 0;
     width: 100%;
-    ;
     display: flex;
 }
 
@@ -1834,6 +1833,25 @@ a.menu-active .menu-bar {
     display: inline-block;
     vertical-align: top;
     font-size: 0.875rem;
+}
+
+/* 金額合計 */
+.table-money-count {
+    padding: 5px 10px;
+    border-right: #aaa solid 1px;
+    border-top: #aaa solid 1px;
+    background: #b6d9ff;
+    text-align: right;
+    font-weight: 700;
+}
+
+.table-money-count::before {
+    content: "小計：$";
+}
+
+.tabulator-group-level-0,
+.tabulator-group-level-1 {
+    display: none;
 }
 
 /* select */
@@ -4338,6 +4356,10 @@ a.menu-active .menu-bar {
     border-bottom: none;
 }
 
+.customize-field-inner-title {
+    background: #f0e3d2;
+}
+
 .up-down-form-field-title {
     /*background: rgba(3, 140, 199, .05);*/
     text-align: center;
@@ -4911,6 +4933,32 @@ span.tp {
 }
 
 /* END: tab-link */
+/* START: 搜尋結果標題 */
+.result-title-block {
+    padding-top: 30px;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    color: #027DB4;
+    word-break: keep-all;
+    white-space: nowrap;
+    background: none;
+    border-style: none;
+}
+
+.result-title-block::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    margin-left: 10px;
+    vertical-align: middle;
+    border-bottom: #027DB4 dotted 1px;
+}
+
+/* END: 搜尋結果標題 */
 /* START: msg */
 .single-msg-block {
     padding: 5px;
@@ -5374,6 +5422,84 @@ span.tp {
 }
 
 /* END: 設定頁面列印 */
+/* START: 月曆 */
+.content-calendar {
+    padding: 0;
+    margin: 5px 10px;
+    border-right: #eee solid 1px;
+    border-left: #eee solid 1px;
+}
+
+.content-calendar-week {
+    border-top: #eee solid 1px;
+    background: #f0ffff;
+}
+
+.content-calendar-item {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.content-calendar-unit {
+    width: 14.28%;
+    text-align: center;
+    border-right: #eee solid 1px;
+    border-bottom: #eee solid 1px;
+}
+
+.content-calendar-unit:nth-child(7n) {
+    border-right: none;
+}
+
+.content-calendar-week .content-calendar-unit {
+    color: #777;
+    font-size: 0.875rem;
+    padding: 5px 10px;
+}
+
+.content-calendar-unit-inner {
+    padding: 10px;
+    height: 100%;
+}
+
+.calendar-num {
+    padding-bottom: 10px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #555;
+}
+
+.content-calendar-break {
+    background: #f4f4f4;
+}
+
+.detail-board-calendar-title {
+    padding: 2px 12px;
+}
+
+.detail-board-calendar-title span {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #777;
+    vertical-align: middle;
+}
+
+span.calendar-condition[time-unit]::after {
+    content: attr(time-unit);
+}
+
+span.calendar-item {
+    padding: 0 2px;
+}
+
+span.calendar-item::after {
+    content: "|";
+    margin: 0 2px 0 8px;
+    vertical-align: text-bottom;
+}
+
+/* END: 月曆 */
 @media only screen and (max-width: 1280px) {
 
     /* START: header */
