@@ -386,21 +386,16 @@
                                     <div class="table-func">
                                         <div class="table-func-inner">
                                             <div class="table-func-basic">
-                                                <div class="func-basic-item func-download">
+                                                <!-- <div class="func-basic-item func-count">
                                                     <ul>
-                                                        <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                        <li class="count-total">2</li>
                                                     </ul>
-                                                </div>
-                                                <div class="func-basic-item func-count">
-                                                    <ul>
-                                                        <li class="count-total">3</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="func-basic-item func-filter">
+                                                </div> -->
+                                                <!-- <div class="func-basic-item func-filter">
                                                     <div class="func-filter-inner">
                                                         <input type="text" placeholder="請輸入值" title="" data-toggle="tooltip" data-placement="top">
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="table-func-page">頁碼</div>
                                         </div>
@@ -589,114 +584,121 @@
 <script src="js/pg.js"></script>
 <!-- 巢狀結構tabulator設定 -->
 <script>
-    let nestedData = [{
-        id: "a1",
-        合併號: "1234546",
-        合併人ID: "D123456789",
-        合併人姓名: "王佩君",
-        支付方式: "支票",
-        支付銀行:"華南",
-        支付帳號: "1234567890",
-        合併筆數: "2",
-        ntTable: [
-            { 筆數: "1", 金額: "500", 總計: "500" },
-            { 筆數: "2", 金額: "1500", 總計: "2000" },
-        ]
-    }, ]
-    
+    let table02Data = [{
+            id: "a1",
+            合併號: "F1234567891234567890123456789",
+            ID: "A123456789",
+            姓名: "王凱兒",
+            帳號: "00300130855",
+            幣別: "NTD",
+            金額:"10",
+            支付方式: "00匯款",
+            筆數: "1",
+        },
+        {
+            id: "a2",
+            合併號: "F1234567891234567890123456789",
+            ID: "A123456789",
+            姓名: "王凱兒",
+            帳號: "064001039661",
+            幣別: "USD",
+            金額:"20",
+            支付方式: "00匯款",
+            筆數: "1",
+        },
+        {
+            id: "a3",
+            合併號: "F1234567891234567890123456789",
+            ID: "A123456789",
+            姓名: "陳婷婷",
+            帳號: "064001039661",
+            幣別: "USD",
+            金額:"30",
+            支付方式: "00匯款",
+            筆數: "1",
+        },
+        {
+            id: "a4",
+            合併號: "F1234567891234567890123456789",
+            ID: "A123456789",
+            姓名: "陳婷婷",
+            帳號: "064001039661",
+            幣別: "USD",
+            金額:"20",
+            支付方式: "00匯款",
+            筆數: "1",
+        },
+        {
+            id: "a5",
+            合併號: "F1234567891234567890123456789",
+            ID: "A123456789",
+            姓名: "王凱兒",
+            帳號: "064001039661",
+            幣別: "USD",
+            金額:"20",
+            支付方式: "00匯款",
+            筆數: "1",
+        },
+        {
+            id: "a6",
+            合併號: "F1234567891234567890123457777",
+            ID: "A123456788",
+            姓名: "陳寧因",
+            帳號: "064001039669",
+            幣別: "USD",
+            金額:"20",
+            支付方式: "00匯款",
+            筆數: "1",
+        },
+    ]
+    var hasGroupSummary = {}
     var table = new Tabulator("#table02", {
-        height: "100%",
+        height: "311px",
         layout: "fitColumns",
-        movableColumns: true,
-        data: nestedData,
-        columns: [{
-                formatter: "rowSelection",
-                titleFormatter: "rowSelection",
-                headerHozAlign: "center",
-                hozAlign: "center",
-                headerSort: false,
-                maxWidth: 30,
-                minWidth: 30,
-                cellClick: function(e, cell) {
-                    cell.getRow().toggleSelect();
-                }
-            },
-            {
-                formatter: (cell, formatterParams, onRendered) => {
-                    let div = document.createElement('div');
-                    let el = cell.getRow().getElement()
-                    let btnName = ["＋", "–"]
-    
-                    btnName.forEach((name, index) => {
-                        let btn = document.createElement('button');
-                        $(btn).text(name)
-                        elementsChangeClass(btn, "add", "table-btn-switch")
-                        btn.addEventListener("click", (e) => {
-                            $(el).find(".table-btn-switch").toggle()
-                            $(el).find(".table-subtable-container").toggle()
-                        });
-                        if (index === 1) {
-                            $(btn).css("display", "none")
-                        }
-                        div.appendChild(btn)
-                    })
-                    return div
-                },
-                headerHozAlign: "center",
-                hozAlign: "center",
-                headerSort: false,
-                maxWidth: 30,
-                minWidth: 30
-            },
-            {
-                title: "合併號",
-                field: "合併號",
-                formatter: function(cell, formatterParams, onRendered) {
-                    return "<a href='#'>" + cell.getValue() + "</a>"
-                },
-                // formatter: "link",
-            },
-            { title: "合併人ID", field: "合併人ID" },
-            { title: "合併人姓名", field: "合併人姓名" },
-            { title: "支付方式", field: "支付方式" },
-            { title: "支付銀行", field: "支付銀行" },
-            { title: "支付帳號", field: "支付帳號" },
-            { title: "合併筆數", field: "合併筆數" },
+        movableRows: true,
+        groupBy: ["支付方式","姓名","帳號"],
+        movableRows: false,
+        headerSort: false,
+        data: table02Data,
+        columns: [
+            { title: "合併號", field: "合併號" },
+            { title: "ID", field: "ID" },
+            { title: "姓名", field: "姓名" },
+            { title: "帳號", field: "帳號" },
+            { title: "幣別", field: "幣別" },
+            { title: "金額", field: "金額" },
+            { title: "支付方式", field: "支付方式"},
+            { title: "筆數", field: "筆數"},
         ],
+    
         rowFormatter: function(row) {
+            var element = row.getElement();
+            var data = row.getData();
+            var group = row.getGroup();
+            
+            var key = data["支付方式"]+data["帳號"]+data["姓名"] + group.getKey();
+            var groupRows = group.getRows();
+            if(groupRows.length===1){
+                row.delete()
+                return
+            }
+    
+            if (key in hasGroupSummary) {
+                hasGroupSummary[key] += 1;
+            } else {
+                hasGroupSummary[key] = 1;
+            }
+    
+            if (groupRows.length === hasGroupSummary[key]) {
             let container = document.createElement("div");
-            let subtable = document.createElement("div");
-    
-            $(container).css("display", "none")
-            elementsChangeClass(container, "add", "table-subtable-container")
-            elementsChangeClass(subtable, "add", "table-subtable")
-            $(subtable).attr("id", row.getData().id)
-    
-            container.appendChild(subtable);
-            row.getElement().appendChild(container);
-    
-            let subTable = new Tabulator("#" + row.getData().id, {
-                layout: "fitColumns",
-                data: row.getData().ntTable,
-                columns: [
-                    { title: "筆數", field: "筆數" },
-                    { title: "金額", field: "金額" },
-                    { title: "總計", field: "總計" },
-                ]
-            })
+            container.classList.add("table-money-count");
+            let amount = groupRows.reduce((sum, row)=>{
+                return sum+=row.getData()["金額"]*1
+            }, 0)
+            container.innerText = amount;
+            element.appendChild(container);
+            }
         },
     });
-    
-    function elementsChangeClass(elements, behavior, classNames) {
-        if (behavior === "add") {
-            $(elements).each(function(index, element) {
-                $(element).addClass(classNames)
-            })
-        } else if (behavior === "remove") {
-            $(elements).each(function(index, element) {
-                $(element).removeClass(classNames)
-            })
-        }
-    }
 </script>
 </html>
