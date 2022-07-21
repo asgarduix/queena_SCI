@@ -317,7 +317,7 @@
                                                         <select name="列印選項" id="">
                                                             <option value="" disabled selected hidden>請選擇</option>
                                                             <option value="">業務明細表</option>
-                                                            <option value="" selected>異常明細表</option>
+                                                            <option value="">異常明細表</option>
                                                             <option value="">未銷帳明細表</option>
                                                             <option value="">單筆查詢</option>
                                                             <option value="">付佣總表</option>
@@ -586,101 +586,85 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-    //測試資料
-    let data = [
-      {
-        序號: "經銷商01",
-        gender: "男",
-        amount: 10000,
-        debt: -100,
-      },
-      {
-        序號: "經銷商01",
-        gender: "男",
-        amount: 20000,
-        debt: -200,
-      },
-      {
-        序號: "經銷商01",
-        gender: "男",
-        amount: 30000,
-        debt: -300,
-      },
-      {
-        序號: "經銷商02",
-        gender: "女",
-        amount: 40000,
-        debt: -400,
-      },
-      {
-        序號: "經銷商02",
-        gender: "女",
-        amount: 50000,
-        debt: -500,
-      },
-      {
-        序號: "經銷商02",
-        gender: "女",
-        amount: 60000,
-        debt: -600,
-      },
-    ];
-
-    var table01data = new Tabulator("#table01", {
-      height: "100%",
-      layout: "fitColumns",
-      groupBy: ["gender"], //資料依照此設定分組
-      columnCalcs: "both", //計算欄位顯示 分組 與 總計
-      data: data,
-      selectable: true,
-      columns: [
-        {
-          formatter: "rowSelection",
-          titleFormatter: "rowSelection",
-        },
-        { title: "序號", field: "序號" },
-        { title: "經銷商", field: "經銷商" },
-        { title: "保代任意/強制", field: "保代任意/強制" },
-        { title: "出單", field: "出單" },
-        { title: "保單號碼", field: "保單號碼" },
-        { title: "批單號碼", field: "批單號碼" },
-        { title: "期別", field: "期別" },
-        { title: "銷帳日", field: "銷帳日" },
-        {
-          title: "應收保費",
-          field: "amount",
-          bottomCalc: function (values, data, calcParams) {
-            let table = Tabulator.prototype.findTable("#table01data")[0];
-            let str =
-            values.length === table?.getDataCount() ? "合計" : "小計";
-            return `${str}： ` + values.reduce((a, b) => a + b, 0);
-          },
-          formatter: "money",
-        },
-        {
-          title: "實收保費",
-          field: "debt",
-          bottomCalc: function (values, data, calcParams) {
-            let table = Tabulator.prototype.findTable("#table01")[0];
-            let str =
-              values.length === table?.getDataCount() ? "合計" : "小計";
-            return `${str}： ` + values.reduce((a, b) => a + b, 0);
-          },
-          formatter: "money",
-        },
-        {
-          title: "佣金",
-          field: "debt",
-          bottomCalc: function (values, data, calcParams) {
-            let table = Tabulator.prototype.findTable("#table01")[0];
-            let str =
-              values.length === table?.getDataCount() ? "合計" : "小計";
-            return `${str}： ` + values.reduce((a, b) => a + b, 0);
-          },
-          formatter: "money",
-        },
-      ],
+    let table01Data = [{
+        id: "b1",
+        保代業務日期: "設計文字",
+        車商保代: "設計文字",
+        批號: "設計文字",
+        經銷商: "設計文字",
+        保代任意強制: "設計文字",
+        出單: "設計文字",
+        保單號碼: "設計文字",
+        批單號碼: "設計文字",
+        序號: "設計文字",
+        保戶名稱: "設計文字",
+        應收保費: "設計文字",
+        實收保費: "設計文字",
+        保費差額: "設計文字",
+        佣金: "設計文字",
+        保代佣金: "設計文字",
+        佣金差額: "設計文字",
+        出帳佣: "設計文字",
+        洽攬人: "設計文字",
+        收件日: "設計文字",
+        銷帳日: "設計文字",
+        出單日: "設計文字",
+        出帳日: "設計文字",
+    }, ];
+    var table01 = new Tabulator("#table01", {
+        data: table01Data,
+        //autoColumns: true,
+        layout: "fitColumns",
+        height: "255px",
+        pagination: "local",
+        paginationSize: 5,
+        paginationSizeSelector: [5, 10, 30, 50, true],
+        movableColumns: true,
+        resizableRows: true,
+        tooltips: true,
+        tooltipsHeader: true,
+        tooltipGenerationMode: "hover",
+        selectable: true,
+        columns: [{
+                formatter: "rowSelection",
+                titleFormatter: "rowSelection",
+                headerHozAlign: "center",
+                hozAlign: "center",
+                headerSort: false,
+                maxWidth: 30,
+                minWidth: 30,
+                cellClick: function(e, cell) {
+                    cell.getRow().toggleSelect();
+                }
+            },
+            { title: "保代業務日期", field: "保代業務日期" },
+            { title: "車商保代", field: "車商保代" },
+            { title: "批號", field: "批號" },
+            { title: "經銷商", field: "經銷商" },
+            { title: "保代任意/強制", field: "保代任意/強制" },
+            { title: "出單", field: "出單" },
+            { title: "保單號碼", field: "保單號碼" },
+            { title: "批單號碼", field: "批單號碼" },
+            { title: "序號", field: "序號" },
+            { title: "保戶名稱", field: "保戶名稱" },
+            { title: "應收保費", field: "應收保費" },
+            { title: "實收保費", field: "實收保費" },
+            { title: "保費差額", field: "保費差額" },
+            { title: "佣金", field: "佣金" },
+            { title: "保代佣金", field: "保代佣金" },
+            { title: "佣金差額", field: "佣金差額" },
+            { title: "出帳佣", field: "出帳佣" },
+            { title: "洽攬人", field: "洽攬人" },
+            { title: "收件日", field: "收件日" },
+            { title: "銷帳日", field: "銷帳日" },
+            { title: "出單日", field: "出單日" },
+            { title: "出帳日", field: "出帳日" },
+        ],
     });
-  </script>
+    // 選擇預設勾選row
+    table01.selectRow(["b1"]);
+    // 使用filter能精準指定欄位
+    //table.selectRow(table.setFilter("id","=","a1"));
+</script>
 
 </html>

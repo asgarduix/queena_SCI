@@ -317,7 +317,7 @@
                                                         <select name="列印選項" id="">
                                                             <option value="" disabled selected hidden>請選擇</option>
                                                             <option value="">業務明細表</option>
-                                                            <option value="" selected>異常明細表</option>
+                                                            <option value="">異常明細表</option>
                                                             <option value="">未銷帳明細表</option>
                                                             <option value="">單筆查詢</option>
                                                             <option value="">付佣總表</option>
@@ -639,26 +639,45 @@
           titleFormatter: "rowSelection",
         },
         { title: "序號", field: "序號" },
-        { title: "經銷商", field: "經銷商" },
+        { title: "車商保代", field: "車商保代" },
         { title: "保代任意/強制", field: "保代任意/強制" },
         { title: "出單", field: "出單" },
         { title: "保單號碼", field: "保單號碼" },
         { title: "批單號碼", field: "批單號碼" },
-        { title: "期別", field: "期別" },
+        { title: "保戶名稱", field: "保戶名稱" },
+        { title: "保戶名稱代號", field: "保戶名稱代號" },
+        { title: "保代佣金", field: "保代佣金" },
+        { title: "佣金差額", field: "佣金差額" },
+        { title: "出帳佣", field: "出帳佣" },
+        { title: "洽攬人", field: "洽攬人" },
+        { title: "收件日", field: "收件日" },
         { title: "銷帳日", field: "銷帳日" },
+        { title: "出單日", field: "出單日" },
+        { title: "出帳日", field: "出帳日" },
         {
           title: "應收保費",
           field: "amount",
           bottomCalc: function (values, data, calcParams) {
             let table = Tabulator.prototype.findTable("#table01data")[0];
             let str =
-            values.length === table?.getDataCount() ? "合計" : "小計";
+              values.length === table?.getDataCount() ? "合計" : "小計";
             return `${str}： ` + values.reduce((a, b) => a + b, 0);
           },
           formatter: "money",
         },
         {
           title: "實收保費",
+          field: "debt",
+          bottomCalc: function (values, data, calcParams) {
+            let table = Tabulator.prototype.findTable("#table01")[0];
+            let str =
+              values.length === table?.getDataCount() ? "合計" : "小計";
+            return `${str}： ` + values.reduce((a, b) => a + b, 0);
+          },
+          formatter: "money",
+        },
+        {
+          title: "保費差額",
           field: "debt",
           bottomCalc: function (values, data, calcParams) {
             let table = Tabulator.prototype.findTable("#table01")[0];

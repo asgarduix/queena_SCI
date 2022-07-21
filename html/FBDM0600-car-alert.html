@@ -317,7 +317,7 @@
                                                         <select name="列印選項" id="">
                                                             <option value="" disabled selected hidden>請選擇</option>
                                                             <option value="">業務明細表</option>
-                                                            <option value="" selected>異常明細表</option>
+                                                            <option value="">異常明細表</option>
                                                             <option value="">未銷帳明細表</option>
                                                             <option value="">單筆查詢</option>
                                                             <option value="">付佣總表</option>
@@ -566,6 +566,30 @@
             </main>
         </div>
     </div>
+    <!-- popup-confirm -->
+    <div class="content-component content-popup">
+        <div class="popup-dialog popup-dialog-confirm">
+            <form action="">
+                <div class="dialog-header">
+                    <div class="dialog-header-inner">
+                        <div class="dialog-header-item dialog-title">提示訊息</div>
+                        <div class="dialog-header-item dialog-cancel">
+                            <a href="#"><span class="material-icons">cancel</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="dialog-content">
+                    <p>批號成功產生<br/>批號<span class="dialog-count">11006~11000</span></p>
+                </div>
+                <div class="dialog-btn">
+                    <ul>
+                        <li><button class="btn-prime">確定</button></li>
+                        <!-- <li><button class="btn-outline">取消</button></li> -->
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>
@@ -652,7 +676,7 @@
           bottomCalc: function (values, data, calcParams) {
             let table = Tabulator.prototype.findTable("#table01data")[0];
             let str =
-            values.length === table?.getDataCount() ? "合計" : "小計";
+              values.length === table?.getDataCount() ? "合計" : "小計";
             return `${str}： ` + values.reduce((a, b) => a + b, 0);
           },
           formatter: "money",
