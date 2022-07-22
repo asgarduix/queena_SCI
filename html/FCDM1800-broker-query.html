@@ -607,7 +607,16 @@
       data: data,
       selectable: true,
       groupHeader:function(value, count, data, group){
-      return value + "<button>(" + count + " 筆)</button>";
+        let div = document.createElement("div")
+        div.classList.add("func-data-modify")
+        div.style.display = "inline-block"
+        let a = document.createElement("a")
+        a.innerText = "發票"
+        a.classList.add("table-data-modify")
+        div.appendChild(a)
+
+
+      return div;
         },
       columns: [{
             formatter: "rowSelection",
