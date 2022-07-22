@@ -26,6 +26,12 @@
     <link rel="stylesheet" href="css/page.css">
     <!-- pg使用 -->
     <link rel="stylesheet" href="css/pg.css">
+    <style>
+        .tabulator-group-level-0,
+        .tabulator-group-level-1 {
+        display: block;
+        }
+    </style>
 </head>
 
 <body id="canvas" class="fbcm0100-tab1-query">
@@ -206,7 +212,7 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title">車商保代業務資料維護作業</div>
+                                <div class="unitname-item unitname-title">經紀人出帳批號維護作業</div>
                                 <div class="unitname-item unitname-favourite">
                                     <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
                                 </div>
@@ -218,94 +224,63 @@
                             <div class="detail-board detail-board-query">
                                 <!-- query -->
                                 <div class="content-component content-query">
-                                    <!-- 地區/銀行代號/託收銀行帳號 -->
+                                    <!-- 付款/選擇/付佣日 -->
                                     <div class="query-row">
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">車商保代</div>
+                                                <div class="query-field-item query-field-title">付款</div>
                                                 <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="車商保代" title="" value="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
-                                        <div class="query-field query-datepicker">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">業務日期</div>
-                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="業務日期" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-double-datepicker">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">收件日期</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="收件日期起" value="" title="" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-1">～</div>
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="date" name="收件日期迄" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 票據號碼/到期日/票據金額 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-double-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">批號</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="text" name="批號" placeholder="請輸入值" value="12345678" title="12345678" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-1">～</div>
-                                                        <div class="entry-combine entry-45">
-                                                            <input type="text" name="批號" placeholder="請輸入值" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-datepicker">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">暫付日期</div>
-                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="暫付日期" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
                                         <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">申請單號</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="申請單號" attr='money' onkeypress="return onlyNumberKey(event)" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 發票人帳號/付款別 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-datepicker">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">核帳日</div>
-                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="暫付日期" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-title">選擇</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="選擇" value="007666" title="007666" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">付佣日</div>
-                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="暫付日期" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="付佣日" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- 洽攬人/操作員/批號 -->
                                     <div class="query-row">
-                                        <div class="query-field query-input query-input-half query-input-combine">
+                                        <div class="query-field query-input">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">篩選條件</div>
+                                                <div class="query-field-item query-field-title">洽攬人</div>
                                                 <div class="query-field-item query-field-entry">
-                                                    <ul>
-                                                        <li><input type="radio" id="rd01" name="輸入順序排序"><label for="rd01">輸入順序排序</label></li>
-                                                        <li><input type="radio" id="rd02" name="保單號碼排序"><label for="rd02">保單號碼排序</label></li>
-                                                        <li><input type="checkbox" id="cb01" name="顯示小計"><label for="cb01">顯示小計</label></li>
-                                                    </ul>
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="選擇" value="024A" title="007666" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">操作員</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="操作員" title="" value="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">批號</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="批號" title="" value="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
                                     </div>
@@ -316,12 +291,10 @@
                                                     <div class="query-field-item query-field-entry">
                                                         <select name="列印選項" id="">
                                                             <option value="" disabled selected hidden>請選擇</option>
-                                                            <option value="">業務明細表</option>
-                                                            <option value="">異常明細表</option>
-                                                            <option value="">未銷帳明細表</option>
-                                                            <option value="">單筆查詢</option>
-                                                            <option value="">付佣總表</option>
-                                                            <option value="">業務明細表</option>
+                                                            <option value="">支付總表</option>
+                                                            <option value="">佣金支付明細表</option>
+                                                            <option value="">沖暫付佣金明細表</option>
+                                                            <option value="">匯總表</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -340,19 +313,13 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li>
                                         </ul>
                                     </div>
                                     <div class="content-btn-secondary">
                                         <ul>
-                                            <li><button class="content-btn-item btn-secondary btn-signed"><span>轉入資料庫</span></button></li>
                                             <li><button class="content-btn-item btn-secondary btn-print"><span>列印</span></button></li>
                                             <li><button class="content-btn-item btn-secondary btn-save"><span>存檔</span></button></li>
-                                        </ul>
-                                    </div>
-                                    <div class="content-btn-third">
-                                        <ul>
-                                            <li><button class="content-btn-item btn-third"><span>發票</span></button></li>
-                                            <li><button class="content-btn-item btn-third"><span>寄發mail</span></button></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -586,85 +553,97 @@
 <!-- pg使用 -->
 <script src="js/pg.js"></script>
 <script>
-    let table01Data = [{
-        id: "b1",
-        保代業務日期: "設計文字",
-        車商保代: "設計文字",
-        批號: "設計文字",
-        經銷商: "設計文字",
-        保代任意強制: "設計文字",
-        出單: "設計文字",
-        保單號碼: "設計文字",
-        批單號碼: "設計文字",
-        序號: "設計文字",
-        保戶名稱: "設計文字",
-        應收保費: "設計文字",
-        實收保費: "設計文字",
-        保費差額: "設計文字",
-        佣金: "設計文字",
-        保代佣金: "設計文字",
-        佣金差額: "設計文字",
-        出帳佣: "設計文字",
-        洽攬人: "設計文字",
-        收件日: "設計文字",
-        銷帳日: "設計文字",
-        出單日: "設計文字",
-        出帳日: "設計文字",
-    }, ];
-    var table01 = new Tabulator("#table01", {
-        data: table01Data,
-        //autoColumns: true,
-        layout: "fitColumns",
-        height: "255px",
-        pagination: "local",
-        paginationSize: 5,
-        paginationSizeSelector: [5, 10, 30, 50, true],
-        movableColumns: true,
-        resizableRows: true,
-        tooltips: true,
-        tooltipsHeader: true,
-        tooltipGenerationMode: "hover",
-        selectable: true,
-        columns: [{
-                formatter: "rowSelection",
-                titleFormatter: "rowSelection",
-                headerHozAlign: "center",
-                hozAlign: "center",
-                headerSort: false,
-                maxWidth: 30,
-                minWidth: 30,
-                cellClick: function(e, cell) {
-                    cell.getRow().toggleSelect();
-                }
-            },
-            { title: "保代業務日期", field: "保代業務日期" },
-            { title: "車商保代", field: "車商保代" },
-            { title: "批號", field: "批號" },
-            { title: "經銷商", field: "經銷商" },
-            { title: "保代任意/強制", field: "保代任意/強制" },
-            { title: "出單", field: "出單" },
-            { title: "保單號碼", field: "保單號碼" },
-            { title: "批單號碼", field: "批單號碼" },
-            { title: "序號", field: "序號" },
-            { title: "保戶名稱", field: "保戶名稱" },
-            { title: "應收保費", field: "應收保費" },
-            { title: "實收保費", field: "實收保費" },
-            { title: "保費差額", field: "保費差額" },
-            { title: "佣金", field: "佣金" },
-            { title: "保代佣金", field: "保代佣金" },
-            { title: "佣金差額", field: "佣金差額" },
-            { title: "出帳佣", field: "出帳佣" },
-            { title: "洽攬人", field: "洽攬人" },
-            { title: "收件日", field: "收件日" },
-            { title: "銷帳日", field: "銷帳日" },
-            { title: "出單日", field: "出單日" },
-            { title: "出帳日", field: "出帳日" },
-        ],
+    //測試資料
+    let data = [
+      {
+        支付方式: "支存",
+        經紀人名稱:"順益財產保險代理人股份有限公司",
+        gender: "024A",
+        amount: 10000,
+        debt: -100,
+      },
+      {
+        支付方式: "支存",
+        經紀人名稱:"順益財產保險代理人股份有限公司",
+        gender: "024A",
+        amount: 20000,
+        debt: -200,
+      },
+      {
+        支付方式: "支存",
+        經紀人名稱:"順益財產保險代理人股份有限公司",
+        gender: "024A",
+        amount: 30000,
+        debt: -300,
+      },
+      {
+        支付方式: "支存",
+        經紀人名稱:"順益財產保險代理人股份有限公司",
+        gender: "033A",
+        amount: 40000,
+        debt: -400,
+      },
+      {
+        支付方式: "支存",
+        經紀人名稱:"順益財產保險代理人股份有限公司",
+        gender: "033A",
+        amount: 50000,
+        debt: -500,
+      },
+      {
+        支付方式: "支存",
+        經紀人名稱:"順益財產保險代理人股份有限公司",
+        gender: "033A",
+        amount: 60000,
+        debt: -600,
+      },
+    ];
+
+    var table01data = new Tabulator("#table01", {
+      height: "100%",
+      layout: "fitColumns",
+      groupBy: ["gender"], //資料依照此設定分組
+      columnCalcs: "both", //計算欄位顯示 分組 與 總計
+      data: data,
+      selectable: true,
+      groupHeader:function(value, count, data, group){
+      return value + "<button>(" + count + " 筆)</button>";
+        },
+      columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            maxWidth: 30,
+            minWidth: 30,
+            headerSort: false,
+        },
+        { title: "支付方式", field: "支付方式" },
+        { title: "單位", field: "單位" },
+        { title: "經紀人代號", field: "經紀人代號" },
+        { title: "經紀人名稱", field: "經紀人名稱" },
+        { title: "應付佣金", field: "應付佣金" },
+        { title: "批號", field: "批號" },
+        { title: "支票領取", field: "支票領取" },
+        {
+          title: "應收佣金",
+          field: "debt",
+          bottomCalc: function (values, data, calcParams) {
+            let table = Tabulator.prototype.findTable("#table01")[0];
+            let str = ""
+            let button = ""
+            if(values.length === table?.getDataCount()){
+                str = "合計"
+            } else {
+                str = "小計"
+                button = document.createElement("button")
+                button.innerText = "發票"
+            }
+            return `${str}： ` + values.reduce((a, b) => a + b, 0) + "<button>hjk</button>";
+            
+          },
+          formatter: "money",
+        },
+      ],
     });
-    // 選擇預設勾選row
-    table01.selectRow(["b1"]);
-    // 使用filter能精準指定欄位
-    //table.selectRow(table.setFilter("id","=","a1"));
-</script>
+  </script>
 
 </html>
