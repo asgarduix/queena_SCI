@@ -642,13 +642,14 @@
         { title: "經銷商", field: "經銷商" },
         { title: "保代任意/強制", field: "保代任意/強制" },
         { title: "出單", field: "出單" },
+        { title: "日批號", field: "日批號" },
         { title: "保單號碼", field: "保單號碼" },
         { title: "批單號碼", field: "批單號碼" },
         { title: "期別", field: "期別" },
         { title: "銷帳日", field: "銷帳日" },
         {
           title: "應收保費",
-          field: "amount",
+          field: "debt",
           bottomCalc: function (values, data, calcParams) {
             let table = Tabulator.prototype.findTable("#table01data")[0];
             let str =
@@ -670,6 +671,17 @@
         },
         {
           title: "佣金",
+          field: "debt",
+          bottomCalc: function (values, data, calcParams) {
+            let table = Tabulator.prototype.findTable("#table01")[0];
+            let str =
+              values.length === table?.getDataCount() ? "合計" : "小計";
+            return `${str}： ` + values.reduce((a, b) => a + b, 0);
+          },
+          formatter: "money",
+        },
+        {
+          title: "保代佣金",
           field: "debt",
           bottomCalc: function (values, data, calcParams) {
             let table = Tabulator.prototype.findTable("#table01")[0];
