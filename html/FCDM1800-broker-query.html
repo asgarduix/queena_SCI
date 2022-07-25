@@ -27,7 +27,7 @@
     <!-- pg使用 -->
     <link rel="stylesheet" href="css/pg.css">
     <style>
-        .tabulator-group-level-0,
+        .tabulator-group-level-0,   
         .tabulator-group-level-1 {
         display: block;
         }
@@ -646,7 +646,7 @@
                 button = document.createElement("button")
                 button.innerText = "發票"
             }
-            return `${str}： ` + values.reduce((a, b) => a + b, 0) + "<button>hjk</button>";
+            return `${str}： ` + values.reduce((a, b) => a + b, 0) ;
             
           },
           formatter: "money",
