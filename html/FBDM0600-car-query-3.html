@@ -295,7 +295,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="query-row">
+                                    <!-- <div class="query-row">
                                         <div class="query-field query-input query-input-half query-input-combine">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">篩選條件</div>
@@ -308,7 +308,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <div class="query-row">
                                             <div class="query-field query-selector">
                                                 <div class="query-field-inner">
@@ -319,9 +319,6 @@
                                                             <option value="">業務明細表</option>
                                                             <option value="">異常明細表</option>
                                                             <option value="">未銷帳明細表</option>
-                                                            <option value="">單筆查詢</option>
-                                                            <option value="">付佣總表</option>
-                                                            <option value="">業務明細表</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -373,9 +370,6 @@
                                                     <li><button>瀏覽</button></li>
                                                     <li><button disabled="">上傳</button></li>
                                                 </ul>
-                                            </div>
-                                            <div class="upload-item upload-note">
-                                                <p>檔案格式：txt、csv，<a href="#">下載範例檔</a></p>
                                             </div>
                                         </div>
                                     </form>
@@ -633,8 +627,8 @@
       data: data,
       selectable: true,
         columns: [{
-            formatter: "rowSelection",
-            titleFormatter: "rowSelection",
+            //formatter: "rowSelection",
+            //titleFormatter: "rowSelection",
             maxWidth: 30,
             minWidth: 30,
             headerSort: false,
