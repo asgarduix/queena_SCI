@@ -228,7 +228,7 @@
                                         </div>
                                         <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">業務日期</div>
+                                                <div class="query-field-item query-field-title">業務日期</div>//改下拉
                                                 <div class="query-field-item query-field-entry"><input type="date" id="" name="業務日期" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
@@ -359,21 +359,6 @@
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
-                                <!-- 跟隨tabulator_upload -->
-                                <div class="content-component content-upload">
-                                    <form action="">
-                                        <div class="upload-inner">
-                                            <div class="upload-item upload-title">上傳檔案</div>
-                                            <div class="upload-item upload-field"><input type="text"></div>
-                                            <div class="upload-item upload-btn">
-                                                <ul>
-                                                    <li><button>瀏覽</button></li>
-                                                    <li><button disabled="">上傳</button></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
                                 <div class="content-component content-table content-table-counter">
                                     <div class="table-func">
                                         <div class="table-func-inner">
@@ -644,6 +629,8 @@
         { title: "期別", field: "期別" },
         { title: "銷帳日", field: "銷帳日" },
         {
+            //小記group,批號車商保代,經銷商
+            //批號做合計如果有Ｎ個批號就有Ｎ個合計
           title: "應收保費",
           field: "debt",
           bottomCalc: function (values, data, calcParams) {
