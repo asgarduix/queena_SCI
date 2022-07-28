@@ -216,92 +216,63 @@
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board detail-board-query">
-                                <!-- query -->
-                                <div class="content-component content-query">
-                                    <!-- 申請單類別/付款單位/操作員 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">申請單類別</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="申請單類別" title="" value="" data-toggle="tooltip" data-placement="top"></div>
+                                <div class="query-row">
+                                    <div class="query-field query-radio">
+                                        <div class="query-field-inner">
+                                            <div class="query-field-item query-field-title">作業項目</div>
+                                            <div class="query-field-item query-field-entry">
+                                                <ul>
+                                                    <li><input type="radio" id="rd01" name="作業項目"><label for="rd01">報表</label></li>
+                                                    <li><input type="radio" id="rd02" name="作業項目"><label for="rd02">維護</label></li>
+                                                </ul>
                                             </div>
                                         </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">付款單位</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="付款單位" title="" value="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">操作員</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <div class="entry-inner">
-                                                        <div class="entry-combine entry-4">
-                                                            <input type="text" name="選擇" value="000272" title="007666" data-toggle="tooltip" data-placement="top">
-                                                        </div>
-                                                        <div class="entry-combine entry-6">
-                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
-                                                        </div>
+                                    </div>
+                                </div>
+                                <div class="query-row">
+                                    <div class="query-field query-input">
+                                        <div class="query-field-inner">
+                                            <div class="query-field-item query-field-title">經辦人員</div>
+                                            <div class="query-field-item query-field-entry">
+                                                <div class="entry-inner">
+                                                    <div class="entry-combine entry-4">
+                                                        <input type="text" name="經辦人員" value="007666" title="007666" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                    <div class="entry-combine entry-6">
+                                                        <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 申請單號/作業項目 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">申請單號</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="申請單號" title="" value="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-checkbox query-input-half query-input-combine">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">作業項目</div>
-                                                <div class="query-field-item query-field-entry">
-                                                    <ul>
-                                                        <li><input type="checkbox" id="cb01" name="作業項目"><label for="cb01">暫收款(銀溢)匯總表</label></li>
-                                                        <li><input type="checkbox" id="cb02" name="作業項目"><label for="cb02">申請單彙印</label></li>
-                                                        <li><input type="checkbox" id="cb03" name="作業項目"><label for="cb03">匯款清單</label></li>
-                                                        <li><input type="checkbox" id="cb03" name="作業項目"><label for="cb03">郵遞標籤</label></li>
-                                                        <li><input type="checkbox" id="cb03" name="作業項目"><label for="cb03">查詢發票</label></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 出帳日期/出帳批號 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-datepicker">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">出帳日期</div>
-                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="出帳日期" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-input">
-                                            <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">出帳批號</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="出帳批號" title="" value="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 列印選項 -->
-                                    <div class="query-row">
-                                        <div class="query-field query-selector query-input-half query-input-combine">
-                                                <div class="query-field-inner">
-                                                    <div class="query-field-item query-field-title">列印選項</div>
-                                                    <div class="query-field-item query-field-entry">
-                                                        <select name="列印選項" id="">
-                                                            <option value="" disabled selected hidden>請選擇</option>
-                                                            <option value="">申請單列印</option>
-                                                            <option value="">匯款表單</option>
-                                                            <option value="">郵遞標籤</option>
-                                                            <option value="">郵件執據表</option>
-                                                            <option value="">暫收款(銀溢)彙總表</option>
-                                                        </select>
+                                    <div class="query-field query-input">
+                                        <div class="query-field-inner">
+                                            <div class="query-field-item query-field-title">幣別</div>
+                                            <div class="query-field-item query-field-entry">
+                                                <div class="entry-inner">
+                                                    <div class="entry-combine entry-3">
+                                                        <input type="text" name="幣別" value="NTD" title="NTD" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                    <div class="entry-combine entry-7">
+                                                        <input type="text" disabled="" name="幣別" attr="readonly" value="台幣" title="台幣" data-toggle="tooltip" data-placement="top">
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="query-field query-input">
+                                        <div class="query-field-inner">
+                                            <div class="query-field-item query-field-title">幣別</div>
+                                            <div class="query-field-item query-field-entry">
+                                                <div class="entry-inner">
+                                                    <div class="entry-combine entry-3">
+                                                        <input type="text" disabled="" name="幣別" value="NTD" title="NTD" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                    <div class="entry-combine entry-7">
+                                                        <input type="text" disabled="" name="幣別" attr="" value="台幣" title="台幣" data-toggle="tooltip" data-placement="top">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -335,8 +306,8 @@
                             <!-- tab-link -->
                             <div class="content-component content-tab-link">
                                 <ul>
-                                    <li><a href="#">利息</a></li>
-                                    <li><a href="#" class="tab-link-active">非利息</a></li>
+                                    <li><a href="#" class="tab-link-active">利息</a></li>
+                                    <li><a href="#">非利息</a></li>
                                 </ul>
                             </div>
                             <!-- card-detail >> board -->
@@ -573,17 +544,7 @@
                 }
             },
 
-            { 
-                title: "科目", 
-                field: "科目",
-                formatter: function(cell, formatterParams, onRendered) {
-                    cell.getElement().classList.add("table-input", "tabulator-input-editable");
-                    return "<div class='table-input-inner'>" + cell.getValue() + "</div>"
-                },
-                editor: "input",
-                hozAlign: "left",
-                widthGrow:2, 
-            },
+            { title: "科目", field: "科目" },
             { title: "借方", field: "借方" },
             { title: "貸方", field: "貸方" },
             {
