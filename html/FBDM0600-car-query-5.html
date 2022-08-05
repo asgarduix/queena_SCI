@@ -206,7 +206,7 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title">車商保代業務資料維護作業(原始檔案)</div>
+                                <div class="unitname-item unitname-title">車商保代業務資料維護作業</div>
                                 <div class="unitname-item unitname-favourite">
                                     <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
                                 </div>
@@ -220,10 +220,17 @@
                                 <div class="content-component content-query">
                                     <!-- 地區/銀行代號/託收銀行帳號 -->
                                     <div class="query-row">
-                                        <div class="query-field query-input">
+                                        <div class="query-field query-selector">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">車商保代</div>
-                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" id="" name="車商保代" title="" value="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="信評機構" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="query-field query-datepicker">
@@ -284,18 +291,25 @@
                                     <div class="query-row">
                                         <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">核帳日</div>
-                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="暫付日期" title="" data-toggle="tooltip" data-placement="top"></div>
-                                            </div>
-                                        </div>
-                                        <div class="query-field query-datepicker">
-                                            <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">付佣日</div>
                                                 <div class="query-field-item query-field-entry"><input type="date" id="" name="暫付日期" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">列印選項</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="列印選項" id="">
+                                                        <option value="" disabled selected hidden>請選擇</option>
+                                                        <option value="">業務明細表</option>
+                                                        <option value="">異常明細表</option>
+                                                        <option value="">未銷帳明細表</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="query-row">
+                                    <!-- <div class="query-row">
                                         <div class="query-field query-input query-input-half query-input-combine">
                                             <div class="query-field-inner">
                                                 <div class="query-field-item query-field-title">篩選條件</div>
@@ -308,25 +322,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="query-row">
-                                            <div class="query-field query-selector query-input-half query-input-combine">
-                                                <div class="query-field-inner">
-                                                    <div class="query-field-item query-field-title">列印選項</div>
-                                                    <div class="query-field-item query-field-entry">
-                                                        <select name="列印選項" id="">
-                                                            <option value="" disabled selected hidden>請選擇</option>
-                                                            <option value="">業務明細表</option>
-                                                            <option value="">異常明細表</option>
-                                                            <option value="">未銷帳明細表</option>
-                                                            <option value="">單筆查詢</option>
-                                                            <option value="">付佣總表</option>
-                                                            <option value="">業務明細表</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                        </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -344,17 +340,16 @@
                                     </div>
                                     <div class="content-btn-secondary">
                                         <ul>
-                                            <li><button class="content-btn-item btn-secondary btn-signed"><span>轉入資料庫</span></button></li>
-                                            <li><button class="content-btn-item btn-secondary btn-print"><span>列印</span></button></li>
-                                            <li><button class="content-btn-item btn-secondary btn-save"><span>存檔</span></button></li>
+                                            <!-- <li><button class="content-btn-item btn-secondary btn-signed"><span>轉入資料庫</span></button></li> -->
+                                            <!-- <li><button class="content-btn-item btn-secondary btn-print"><span>列印</span></button></li> -->
                                         </ul>
                                     </div>
-                                    <div class="content-btn-third">
+                                    <!-- <div class="content-btn-third">
                                         <ul>
                                             <li><button class="content-btn-item btn-third"><span>發票</span></button></li>
                                             <li><button class="content-btn-item btn-third"><span>寄發mail</span></button></li>
                                         </ul>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -363,25 +358,15 @@
                         <div class="card-detail">
                             <!-- card-detail >> board -->
                             <div class="detail-board">
-                                <!-- 跟隨tabulator_upload -->
-                                <div class="content-component content-upload">
-                                    <form action="">
-                                        <div class="upload-inner">
-                                            <div class="upload-item upload-title">上傳檔案</div>
-                                            <div class="upload-item upload-field"><input type="text"></div>
-                                            <div class="upload-item upload-btn">
-                                                <ul>
-                                                    <li><button>瀏覽</button></li>
-                                                    <li><button disabled="">上傳</button></li>
-                                                </ul>
-                                            </div>
-                                            <div class="upload-item upload-note">
-                                                <p>檔案格式：txt、csv，<a href="#">下載範例檔</a></p>
+                                <div class="content-component content-table content-table-counter">
+                                    <div class="condition-row">
+                                        <div class="condition-field condition-input">
+                                            <div class="condition-field-inner">
+                                                <div class="condition-field-item condition-field-title">核帳日</div>
+                                                <div class="query-field-item query-field-entry"><input type="date" id="" name="業務日期" title="" data-toggle="tooltip" data-placement="top"></div>
                                             </div>
                                         </div>
-                                    </form>
-                                </div>
-                                <div class="content-component content-table content-table-counter">
+                                    </div>
                                     <div class="table-func">
                                         <div class="table-func-inner">
                                             <div class="table-func-basic">
@@ -589,37 +574,37 @@
     //測試資料
     let data = [
       {
-        序號: "經銷商01",
+        批號: "經銷商01",
         gender: "男",
         amount: 10000,
         debt: -100,
       },
       {
-        序號: "經銷商01",
+        批號: "經銷商01",
         gender: "男",
         amount: 20000,
         debt: -200,
       },
       {
-        序號: "經銷商01",
+        批號: "經銷商01",
         gender: "男",
         amount: 30000,
         debt: -300,
       },
       {
-        序號: "經銷商02",
+        批號: "經銷商02",
         gender: "女",
         amount: 40000,
         debt: -400,
       },
       {
-        序號: "經銷商02",
+        批號: "經銷商02",
         gender: "女",
         amount: 50000,
         debt: -500,
       },
       {
-        序號: "經銷商02",
+        批號: "經銷商02",
         gender: "女",
         amount: 60000,
         debt: -600,
@@ -633,38 +618,32 @@
       columnCalcs: "both", //計算欄位顯示 分組 與 總計
       data: data,
       selectable: true,
-      columns: [
-        {
-          formatter: "rowSelection",
-          titleFormatter: "rowSelection",
+        columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            maxWidth: 30,
+            minWidth: 30,
+            headerSort: false,
         },
-        { title: "序號", field: "序號" },
-        { title: "保代業務日期", field: "保代業務日期" },
-        { title: "車商保代", field: "車商保代" },
         { title: "批號", field: "批號" },
+        { title: "車商保代", field: "車商保代" },
         { title: "經銷商", field: "經銷商" },
         { title: "保代任意/強制", field: "保代任意/強制" },
         { title: "出單", field: "出單" },
+        { title: "日批號", field: "日批號" },
         { title: "保單號碼", field: "保單號碼" },
         { title: "批單號碼", field: "批單號碼" },
-        { title: "保戶名稱", field: "保戶名稱" },
-        { title: "應收保費", field: "應收保費" },
-        { title: "實收保費", field: "實收保費" },
-        { title: "佣金", field: "佣金" },
-        { title: "保代佣金", field: "保代佣金" },
-        { title: "出帳佣", field: "出帳佣" },
-        { title: "洽攬人", field: "洽攬人" },
-        { title: "收件日", field: "收件日" },
+        { title: "期別", field: "期別" },
         { title: "銷帳日", field: "銷帳日" },
-        { title: "出單日", field: "出單日" },
-        { title: "出帳日", field: "出帳日" },
         {
+            //小記group,批號車商保代,經銷商
+            //批號做合計如果有Ｎ個批號就有Ｎ個合計
           title: "應收保費",
-          field: "amount",
+          field: "debt",
           bottomCalc: function (values, data, calcParams) {
             let table = Tabulator.prototype.findTable("#table01data")[0];
             let str =
-              values.length === table?.getDataCount() ? "合計" : "小計";
+            values.length === table?.getDataCount() ? "合計" : "小計";
             return `${str}： ` + values.reduce((a, b) => a + b, 0);
           },
           formatter: "money",
@@ -704,6 +683,6 @@
         },
       ],
     });
-  </script>
+</script>
 
 </html>
