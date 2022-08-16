@@ -581,7 +581,7 @@
                     </div>
                     <div class="dialog-btn">
                         <ul>
-                            <li><button class="btn-prime">關閉</button></li>
+                            <li><button class="btn-prime">儲存</button></li>
                             <li><button class="btn-outline">取消</button></li>
                         </ul>
                     </div>
@@ -714,43 +714,28 @@
     //測試資料
     let data2 = [
       {
-        保代保卡號:"1234567890",
-        保單號碼: "1234567890",
-        批單號碼: "1234567890",
-        保戶名稱: "華南產物保險",
-        保戶名稱: "華南產物保險",
-        應收保費: "200",
-        保代保費: "100",
-        保費差額: "300",
-        應付佣金: "500",
-        保代佣金: "20",
-        佣金: "60"
+        序號:"1",
+        發票號碼: "A1234567890",
+        發票日期: "22/02/30",
+        發票金額: "600",
+        幣別: "TWD",
+        原幣金額: "600",
       },
       {
-        保代保卡號:"1234567890",
-        保單號碼: "1234567890",
-        批單號碼: "1234567890",
-        保戶名稱: "華南產物保險",
-        保戶名稱: "華南產物保險",
-        應收保費:"400",
-        保代保費: "100",
-        保費差額: "600",
-        應付佣金: "1000",
-        保代佣金: "20",
-        佣金: "120"
+        序號:"1234567890",
+        發票號碼: "1234567890",
+        發票日期:  "22/02/30",
+        發票金額: "600",
+        幣別: "TWD",
+        原幣金額:"400",
       },
       {
-        保代保卡號:"1234567890",
-        保單號碼: "1234567890",
-        批單號碼: "1234567890",
-        保戶名稱: "華南產物保險",
-        保戶名稱: "華南產物保險",
-        應收保費: "600",
-        保代保費: "100",
-        保費差額: "900",
-        應付佣金: "1500",
-        保代佣金: "20",
-        佣金: "180"
+        序號:"1234567890",
+        發票號碼: "1234567890",
+        發票日期:  "22/02/30",
+        發票金額: "600",
+        幣別: "TWD",
+        原幣金額: "600",
       },
     ];
 
@@ -768,13 +753,12 @@
             minWidth: 30,
             headerSort: false,
         },
-        { title: "保代保卡號", field: "保代保卡號" },
-        { title: "保單號碼", field: "保單號碼" },
-        { title: "批單號碼", field: "批單號碼" },
-        { title: "保戶名稱", field: "保戶名稱" },
+        { title: "序號", field: "序號" },
+        { title: "發票號碼", field: "發票號碼" },
+        { title: "發票日期", field: "發票日期" },
         {
-          title: "應收保費",
-          field: "應收保費",
+          title: "發票金額",
+          field: "發票金額",
           bottomCalc: function (values, data, calcParams) {
             let table = Tabulator.prototype.findTable("#table02data")[0];
             let str = "合計" ;
@@ -782,54 +766,16 @@
           },
           formatter: "money",
         },
+        { title: "幣別", field: "幣別" },
         {
-          title: "保代保費",
-          field: "保代保費",
+          title: "原幣金額",
+          field: "原幣金額",
           bottomCalc: function (values, data, calcParams) {
             let str = "合計" ;
             return `${str}： ` + values.reduce((a, b) => a + b*1, 0);
           },
           formatter: "money",
         },
-        {
-          title: "保費差額",
-          field: "保費差額",
-          bottomCalc: function (values, data, calcParams) {
-            let str = "合計" ;
-            return `${str}： ` + values.reduce((a, b) => a + b*1, 0);
-          },
-          formatter: "money",
-        },
-        {
-          title: "應付佣金",
-          field: "應付佣金",
-          bottomCalc: function (values, data, calcParams) {
-            let str = "合計" ;
-            return `${str}： ` + values.reduce((a, b) => a + b*1, 0);
-          },
-          formatter: "money",
-        },
-        {
-          title: "保代佣金",
-          field: "保代佣金",
-          bottomCalc: function (values, data, calcParams) {
-            let str = "合計" ;
-            return `${str}： ` + values.reduce((a, b) => a + b*1, 0);
-          },
-          formatter: "money",
-        },
-        {
-          title: "佣金",
-          field: "佣金",
-          bottomCalc: function (values, data, calcParams) {
-            let str = "合計" ;
-            return `${str}： ` + values.reduce((a, b) => a + b*1, 0);
-          },
-          formatter: "money",
-        },
-        { title: "批號", field: "批號" },
-        { title: "暫付日", field: "暫付日" },
-        { title: "銷帳日", field: "銷帳日" },
       ],
     });
 </script>
