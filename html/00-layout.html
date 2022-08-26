@@ -53,78 +53,7 @@
         <div class="frame-block rightBlock" id="right_content">
             <!-- header -->
             <header class="frame-content headerModule">
-                <div class="headerModule-inner">
-                    <div class="header-item header-title">
-                        <div class="menu-btn">
-                            <a href="javascript:;" onclick="menuToggle()" class="menu-active"><span class="menu-bar"></span></a>
-                        </div>
-                        <div class="header-unit">
-                            <div class="header-unit-inner">
-                                <div class="header-unit-item header-unit-finance">
-                                    <a href="#" title="財務">財務</a>
-                                    <ul>
-                                        <li><a href="#" level-next="true">資金運用</a>
-                                            <ul>
-                                                <li><a href="#">短期票券</a></li>
-                                                <li><a href="#">定存管理</a></li>
-                                                <li><a href="#">銀行存款</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#" level-next="true">應收帳款</a>
-                                            <ul>
-                                                <li><a href="#">應收票據</a></li>
-                                                <li><a href="#">信用卡</a></li>
-                                                <li><a href="#">繳費簽收</a></li>
-                                                <li><a href="#">約定扣款</a></li>
-                                                <li><a href="#">條碼</a></li>
-                                                <li><a href="#">銷帳</a></li>
-                                                <li><a href="#">暫收</a></li>
-                                                <li><a href="#">催收</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#" level-next="true">應付帳款</a>
-                                            <ul>
-                                                <li><a href="#">退保支付</a></li>
-                                                <li><a href="#">理賠支付</a></li>
-                                                <li><a href="#">費用支付</a></li>
-                                                <li><a href="#">佣金支付</a></li>
-                                                <li><a href="#">應付未付</a></li>
-                                                <li><a href="#">付款作業</a></li>
-                                                <li><a href="#">國內外交易</a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="header-unit-item header-unit-invest">
-                                    <a href="#" title="投資">投資</a>
-                                </div>
-                                <div class="header-unit-item header-unit-accounting">
-                                    <a href="#" title="會計">會計</a>
-                                </div>
-                                <div class="header-unit-item header-unit-report">
-                                    <a href="#" title="報表">報表</a>
-                                </div>
-                                <div class="header-unit-item header-unit-public">
-                                    <a href="#" title="公用">公用</a>
-                                </div>
-                                <div class="header-unit-item header-unit-manage">
-                                    <a href="#" title="管理">管理</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header-item header-info">
-                        <ul>
-                            <li class="header-info-home"><a href="#"><span class="material-icons">home</span></a></li>
-                            <li class="header-info-identity">
-                                <select>
-                                    <option>財務管理：陳怡芳(ABC12345)</option>
-                                    <option>銀資管理：陳怡芳(ABC12345)</option>
-                                </select>
-                            </li>
-                            <li class="header-info-logout"><a href="javascript:;">登出</a></li>
-                        </ul>
-                    </div>
+                <div class="header-list" include-html-header="include/header/header.html"></div>
             </header>
             <!-- main -->
             <main class="frame-content mainModule">
@@ -199,6 +128,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <span class="entry-note" status="warning">錯誤提示</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -262,6 +192,15 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input query-popup-select">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">彈跳下拉選單</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <a href="#" attr="empty" title="請輸入值請輸入值請輸入值請輸入值請輸入值" data-toggle="tooltip" data-placement="top">請輸入值請輸入值請輸入值請輸入值請輸入值</a>
+                                                    <div class="query-popup-select-cancel"><span class="material-icons">backspace</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -479,7 +418,21 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- 洽攬人代碼 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">票券公司</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="票券公司" attr='' title="" value="" data-toggle="tooltip" data-placement="top"></div>
+                                                <div class="query-field-item query-field-note"><span>%代表全部</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input-66">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">繳款批號起訖</div>
+                                                <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="票券公司" attr='' title="" value="" data-toggle="tooltip" data-placement="top"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="query-row">
                                         <div class="query-field query-input query-input-half query-input-combine">
                                             <div class="query-field-inner">
@@ -537,6 +490,236 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <!-- 文字提示 -->
+                                    <div class="query-row">
+                                        <div class="query-field query-input query-input-half">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">再保公司</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" name="再保公司" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            <span class="entry-note">CHINA RE(GROUP) SG</span>
+                                                        </div>
+                                                        <div class="entry-combine entry-4 query-field-note">
+                                                            <ul>
+                                                                <li><input type="checkbox" id="cb01" name="作業項目"><label for="cb01" class="query-field-combine-checkbox">經紀人註記</label></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 選擇tag欄位 -->
+                                    <div class="query-field query-input query-input-all">
+                                        <div class="query-field-inner">
+                                            <div class="query-field-item query-field-title">險種</div>
+                                            <div class="query-field-item query-field-entry entry-btn"><button type="button" onclick="location.href='basic-09-query-popup.html'">選擇險種</button></div>
+                                        </div>
+                                        <div class="query-field-detail">
+                                            <div class="query-field-item query-field-title"></div>
+                                            <div class="query-field-item query-field-entry">
+                                                <div class="multipe-options">
+                                                    <ul>
+                                                        <li>
+                                                            <span class="multipe-options-item option-no" icon-after="-">01</span>
+                                                            <span class="multipe-options-item option-name">一年期住宅火災保險</span>
+                                                            <span class="material-icons multipe-options-item option-cancel">
+                                                                cancel
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="multipe-options-item option-no" icon-after="-">02</span>
+                                                            <span class="multipe-options-item option-name">長期住宅火災保險</span>
+                                                            <span class="material-icons multipe-options-item option-cancel">
+                                                                cancel
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="multipe-options-item option-no" icon-after="-">03</span>
+                                                            <span class="multipe-options-item option-name">一年期商業火災保險</span>
+                                                            <span class="material-icons multipe-options-item option-cancel">
+                                                                cancel
+                                                            </span>
+                                                        </li>
+                                                        <li>
+                                                            <span class="multipe-options-item option-no" icon-after="-">05</span>
+                                                            <span class="multipe-options-item option-name">內陸運輸保險</span>
+                                                            <span class="material-icons multipe-options-item option-cancel">
+                                                                cancel
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 更多搜尋欄位 -->
+                                    <div class="query-row">
+                                        <div class="query-field-full query-field-trigger">
+                                            <a href="#" class="query-more-link" attr="close" onclick="querySubRowTrigger()">更多搜尋條件</a>
+                                        </div>
+                                    </div>
+                                    <!-- 次要欄位 -->
+                                    <div class="sub-query-row-group" id="querySubRow" style="display: none;">
+                                        <!-- 收檔日期/轉入批號 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-double-datepicker">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">收檔日期</div>
+                                                    <div class="query-field-item query-field-entry">
+                                                        <div class="entry-inner">
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="收檔日期" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                            <div class="entry-combine entry-1">～</div>
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="收檔日期" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">轉入批號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="轉入批號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 預計付款日/帳單編號 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-double-datepicker">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">預計付款日</div>
+                                                    <div class="query-field-item query-field-entry">
+                                                        <div class="entry-inner">
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="預計付款日" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                            <div class="entry-combine entry-1">～</div>
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="預計付款日" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">帳單編號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="帳單編號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 入帳日期/入帳批號 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-double-datepicker">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">入帳日期</div>
+                                                    <div class="query-field-item query-field-entry">
+                                                        <div class="entry-inner">
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="入帳日期" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                            <div class="entry-combine entry-1">～</div>
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="入帳日期" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">入帳批號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="入帳批號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 傳票日期/傳票號 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-double-datepicker">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">傳票日期</div>
+                                                    <div class="query-field-item query-field-entry">
+                                                        <div class="entry-inner">
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="傳票日期" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                            <div class="entry-combine entry-1">～</div>
+                                                            <div class="entry-combine entry-45">
+                                                                <input type="date" name="傳票日期" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">傳票號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="傳票號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 保單號/批單號 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">保單號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="保單號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">批單號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="批單號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 賠案號/批號狀態 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">賠案號</div>
+                                                    <div class="query-field-item query-field-entry"><input type="text" placeholder="請輸入值" name="賠案號" title="" data-toggle="tooltip" data-placement="top"></div>
+                                                </div>
+                                            </div>
+                                            <div class="query-field query-checkbox query-input-66">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">批號狀態</div>
+                                                    <div class="query-field-item query-field-entry">
+                                                        <ul>
+                                                            <li><input type="checkbox" id="cb02" name="批號狀態"><label for="cb02">含超賠帳單</label></li>
+                                                            <li><input type="checkbox" id="cb03" name="批號狀態"><label for="cb03">含現金攤賠</label></li>
+                                                            <li><input type="checkbox" id="cb04" name="批號狀態"><label for="cb04">含應攤回</label></li>
+                                                            <li><input type="checkbox" id="cb05" name="批號狀態"><label for="cb05">含轉移帳單</label></li>
+                                                            <li><input type="checkbox" id="cb06" name="批號狀態"><label for="cb06">復效保費</label></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 印表人員 -->
+                                        <div class="query-row">
+                                            <div class="query-field query-input">
+                                                <div class="query-field-inner">
+                                                    <div class="query-field-item query-field-title">印表人員</div>
+                                                    <div class="query-field-item query-field-entry">
+                                                        <div class="entry-inner">
+                                                            <div class="entry-combine entry-4">
+                                                                <input type="text" name="印表人員" value="" title="" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                            <div class="entry-combine entry-6">
+                                                                <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -571,6 +754,7 @@
                                             <li><button class="content-btn-item btn-secondary btn-print"><span>列印</span></button></li>
                                             <li><button class="content-btn-item btn-secondary btn-insert"><span>轉入資料庫</span></button></li>
                                             <li><button class="content-btn-item btn-secondary btn-save"><span>存檔</span></button></li>
+                                            <li><button class="content-btn-item btn-secondary btn-return"><span>退件通知</span></button></li>
                                         </ul>
                                     </div>
                                     <div class="content-btn-third">
@@ -752,6 +936,7 @@
                                                 <div class="customize-form-title">現金金額</div>
                                                 <div class="customize-form-entry">
                                                     <input type="text" name="現金金額" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)">
+                                                    <span class="entry-note" status="warning">錯誤提示</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -850,6 +1035,28 @@
                                                 <div class="customize-form-title">應收保費合計</div>
                                                 <div class="customize-form-entry">
                                                     <input type="text" name="應收保費合計" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 下拉彈跳 -->
+                                <div class="customize-form-row">
+                                    <div class="customize-form-inner">
+                                        <div class="customize-form-field customize-form-field-1">
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">現金折扣</div>
+                                                <div class="customize-form-entry">
+                                                    <input type="text" name="現金折扣" value="" title="" placeholder="請輸入值" data-toggle="tooltip" data-placement="left" attr='money' onkeypress="return onlyNumberKey(event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="customize-form-field customize-form-field-1 customize-form-popup">
+                                            <div class="customize-field-inner">
+                                                <div class="customize-form-title">下拉彈跳</div>
+                                                <div class="customize-form-entry">
+                                                    <a href="#" attr="empty" title="請輸入值" data-toggle="tooltip" data-placement="top">請輸入值</a>
+                                                    <div class="field-popup-cancel"><span class="material-icons">backspace</span></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -983,6 +1190,16 @@
                                     </div>
                                     <div id="table01"></div>
                                     <div class="table-footer">footer</div>
+                                    <div class="table-note">表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。表格備註，顯示說明。<br><br>
+                                        <p>以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。以P標籤包夾的表格備註，顯示說明。</p>
+                                        <br>
+                                        <ul>
+                                            <li>以ul li標籤包夾的表格備註，顯示說明。</li>
+                                            <li>以ul li標籤包夾的表格備註，顯示說明。</li>
+                                            <li>以ul li標籤包夾的表格備註，顯示說明。</li>
+                                            <li>以ul li標籤包夾的表格備註，顯示說明。</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2384,159 +2601,98 @@
                                 </div>
                             </div>
                         </div>
+                        <hr class="seperate-line">
+                        <!-- 複合式table：tab+複雜表格+金額合計 -->
+                        <div class="card-detail" style="margin-bottom: 5px;">
+                            <div class="detail-board">
+                                <!-- tab-link -->
+                                <div class="content-component content-tab-link">
+                                    <ul>
+                                        <li><a href="#" class="tab-link-active">A表</a></li>
+                                        <li><a href="#">B表</a></li>
+                                        <li><a href="#">增減變動表</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-detail">
+                            <div class="card-multiple-container">
+                                <!-- data -->
+                                <div class="card-detail card-data card-data-right card-data-right-sm">
+                                    <div class="card-data-inner">
+                                        <div class="card-data-row">
+                                            <div class="data-row-inner">
+                                                <div class="data-row-title">水險</div>
+                                                <div class="data-row-content" attr="money">601,042,192</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-data-row">
+                                            <div class="data-row-inner">
+                                                <div class="data-row-title">AH險</div>
+                                                <div class="data-row-content" attr="money">60,951,417</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-data-row">
+                                            <div class="data-row-inner">
+                                                <div class="data-row-title">意險</div>
+                                                <div class="data-row-content" attr="money">613,540,797</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-data-row">
+                                            <div class="data-row-inner">
+                                                <div class="data-row-title">車險</div>
+                                                <div class="data-row-content" attr="money">2,071,442,855</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-data-row">
+                                            <div class="data-row-inner">
+                                                <div class="data-row-title">火險部</div>
+                                                <div class="data-row-content" attr="money">1,470,928,852</div>
+                                            </div>
+                                        </div>
+                                        <div class="card-data-row datal-total-row">
+                                            <div class="data-row-inner">
+                                                <div class="data-row-title"><span>合計</span></div>
+                                                <div class="data-row-content" attr="money">4,817,906,113</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- tabulator創立table -->
+                                <div class="card-detail card-table card-table-left card-table-left-sm">
+                                    <!-- card-detail >> board -->
+                                    <div class="detail-board">
+                                        <div class="content-component content-table">
+                                            <div class="table-func">
+                                                <div class="table-func-inner">
+                                                    <div class="table-func-basic">
+                                                        <div class="func-basic-item func-download">
+                                                            <ul>
+                                                                <li><a href="#" class="table-excel" title="下載excel" data-toggle="tooltip" data-placement="top">EXCEL</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="func-basic-item func-count">
+                                                            <ul>
+                                                                <li class="count-total">6</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-func-page"></div>
+                                                </div>
+                                            </div>
+                                            <div id="table16"></div>
+                                            <div class="table-footer"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- copyright -->
                         <div class="content-component content-copyright">[ V-1.0.1 ] ©2021 華南產物保險</div>
                     </div>
                 </div>
                 <div class="aside">
-                    <div class="aside-item">
-                        <a href="javascript:;" onclick="asideToggle('aside_func1');" class="aside-btn" data-toggle="tooltip" title="待辦事項" data-placement="left"><span class="material-icons">mail_outline</span></a>
-                        <!-- 待辦事項 -->
-                        <div class="aside-group" id="aside_func1" style="display: none;">
-                            <div class="aside-group-header">
-                                <div class="group-header-inner">
-                                    <div class="group-header-item group-header-title" title="待辦事項">待辦事項</div>
-                                    <div class="group-header-item group-header-btn" title="重整"><button>重整</button></div>
-                                </div>
-                            </div>
-                            <div class="aside-group-list list-todo">
-                                <div class="todo-component">
-                                    <div class="todo-header">
-                                        <div class="todo-header-inner">
-                                            <div class="todo-title">出納<span>3</span></div>
-                                            <div class="todo-btn"><a href="#"><span class="material-icons">arrow_drop_down</span></a></div>
-                                        </div>
-                                    </div>
-                                    <div class="todo-content">
-                                        <div class="todo-content-item">
-                                            <div class="todo-date">2021/11/16</div>
-                                            <div class="todo-link">
-                                                <ul>
-                                                    <li><a href=""><span>ABCD123456</span><span>保費科項目名稱</span></a></li>
-                                                    <li><a href=""><span>ABCD123456</span><span>保費科項目名稱</span></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="todo-content-item">
-                                            <div class="todo-date">2021/11/16</div>
-                                            <div class="todo-link">
-                                                <ul>
-                                                    <li><a href=""><span>ABCD123456</span><span>保費科項目名稱</span></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="todo-component">
-                                    <div class="todo-header">
-                                        <div class="todo-header-inner">
-                                            <div class="todo-title">出納<span>3</span></div>
-                                            <div class="todo-btn"><a href="#"><span class="material-icons">arrow_drop_down</span></a></div>
-                                        </div>
-                                    </div>
-                                    <div class="todo-content">
-                                        <div class="todo-content-item">
-                                            <div class="todo-date">2021/11/16</div>
-                                            <div class="todo-link">
-                                                <ul>
-                                                    <li><a href=""><span>ABCD123456</span><span>保費科項目名稱</span></a></li>
-                                                    <li><a href=""><span>ABCD123456</span><span>保費科項目名稱</span></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="todo-content-item">
-                                            <div class="todo-date">2021/11/16</div>
-                                            <div class="todo-link">
-                                                <ul>
-                                                    <li><a href=""><span>ABCD123456</span><span>保費科項目名稱</span></a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aside-item">
-                        <a href="javascript:;" onclick="asideToggle('aside_func2')" class="aside-btn" data-toggle="tooltip" title="常用程式" data-placement="left"><span class="material-icons">grade</span></a>
-                        <!-- 常用程式 -->
-                        <div class="aside-group" id="aside_func2" style="display: none;">
-                            <div class="aside-group-header">
-                                <div class="group-header-inner">
-                                    <div class="group-header-item group-header-title" title="常用程式">常用程式</div>
-                                    <div class="group-header-item group-header-btn" title="編輯"><button>編輯</button></div>
-                                </div>
-                            </div>
-                            <div class="aside-group-list list-favorite">
-                                <ul>
-                                    <li><a href="#"><span>FACM0200</span><span>信用卡入帳維護</span></a></li>
-                                    <li><a href="#"><span>FACM0200</span><span>信用卡入帳維護</span></a></li>
-                                    <li><a href="#"><span>FACM0200</span><span>信用卡入帳維護</span></a><span class="material-icons favorite-remove">close</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aside-item">
-                        <a href="javascript:;" onclick="asideToggle('aside_func3')" class="aside-btn" data-toggle="tooltip" title="操作手冊" data-placement="left"><span class="material-icons">source</span></a>
-                        <!-- 操作手冊 -->
-                        <div class="aside-group" id="aside_func3" style="display: none;">
-                            <div class="aside-group-header">
-                                <div class="group-header-inner">
-                                    <div class="group-header-item group-header-title" title="操作手冊">操作手冊</div>
-                                </div>
-                            </div>
-                            <div class="aside-group-list list-Operation">
-                                <ul>
-                                    <li><a href="#">財務通告</a></li>
-                                    <li><a href="#">財務QA</a></li>
-                                    <li><a href="#">常用表單</a></li>
-                                    <li><a href="#">操作手冊</a></li>
-                                    <li><a href="#">法令規範</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aside-item">
-                        <a href="javascript:;" onclick="asideToggle('aside_func4')" class="aside-btn" data-toggle="tooltip" title="瀏覽紀錄" data-placement="left"><span class="material-icons">save</span></a>
-                        <!-- 瀏覽紀錄 -->
-                        <div class="aside-group" id="aside_func4" style="display: none;">
-                            <div class="aside-group-header">
-                                <div class="group-header-inner">
-                                    <div class="group-header-item group-header-title" title="瀏覽紀錄">瀏覽紀錄</div>
-                                    <div class="group-header-item group-header-btn"><button>清除</button></div>
-                                </div>
-                            </div>
-                            <div class="aside-group-list list-history">
-                                <div class="aside-group-note">
-                                    <p>點擊「清除」後將刪除所有暫存資料</p>
-                                </div>
-                                <ul>
-                                    <li><a href="#"><span>FACM0200</span><span>信用卡入帳維護</span></a><span class="material-icons history-remove">close</span></li>
-                                    <li><a href="#"><span>FACM0200</span><span>信用卡入帳維護</span></a><span class="material-icons history-remove">close</span></li>
-                                    <li><a href="#"><span>FACM0200</span><span>信用卡入帳維護</span></a><span class="material-icons history-remove">close</span></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="aside-item">
-                        <a href="javascript:;" onclick="asideToggle('aside_func5')" class="aside-btn" data-toggle="tooltip" title="使用者設定" data-placement="left"><span class="material-icons">settings</span></a>
-                        <!-- 使用者設定 -->
-                        <div class="aside-group" id="aside_func5" style="display: none;">
-                            <div class="aside-group-header">
-                                <div class="group-header-inner">
-                                    <div class="group-header-item group-header-title" title="使用者設定">使用者設定</div>
-                                </div>
-                            </div>
-                            <div class="aside-group-list list-setting">
-                                <div class="setting-item">
-                                    <div class="setting-item-inner">
-                                        <div class="setting-title">深色模式</div>
-                                        <div class="setting-btn"><span class="material-icons">toggle_off</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="aside-list" include-html-aside="include/aside/aside.html"></div>
                 </div>
             </main>
         </div>
@@ -3987,6 +4143,160 @@ let table15 = new Tabulator("#table15", {
         },
     ],
 });
+</script>
+<script>
+// 複合式table：tab+複雜表格+金額合計
+let table16Data = [{
+        id: "a1",
+        列號: "1",
+        險別: "一年期住宅保險(火)",
+        代號: "0010",
+        未決未賠1: "12,830,000",
+        未決未賠2: "17,730,000",
+        增減變動1: "4,900,000",
+        未決未賠3: "0",
+        未決未賠4: "0",
+        增減變動2: "0",
+    },
+    {
+        id: "a2",
+        列號: "2",
+        險別: "長期住宅火災保險",
+        代號: "0020",
+        未決未賠1: "130,000",
+        未決未賠2: "130,000",
+        增減變動1: "0",
+        未決未賠3: "19,500",
+        未決未賠4: "19,500",
+        增減變動2: "0",
+    },
+    {
+        id: "a3",
+        列號: "3",
+        險別: "一年期商業火災保險",
+        代號: "0030",
+        未決未賠1: "1,451,731,666",
+        未決未賠2: "1,419,422,879",
+        增減變動1: "32,308,878",
+        未決未賠3: "1,209,561,282",
+        未決未賠4: "1,183,221,305",
+        增減變動2: "26,339,977",
+    },
+    {
+        id: "a4",
+        列號: "4",
+        險別: "長期商業火災保險",
+        代號: "0040",
+        未決未賠1: "0",
+        未決未賠2: "0",
+        增減變動1: "0",
+        未決未賠3: "0",
+        未決未賠4: "0",
+        增減變動2: "0",
+    },
+    {
+        id: "a5",
+        列號: "5",
+        險別: "內陸運輸保險(水)",
+        代號: "0050",
+        未決未賠1: "2,814,138",
+        未決未賠2: "3,728,888",
+        增減變動1: "914,750",
+        未決未賠3: "2,802,138",
+        未決未賠4: "3,167,688",
+        增減變動2: "365,550",
+    },
+    {
+        id: "a6",
+        列號: "6",
+        險別: "內陸運輸保險(意)",
+        代號: "0050",
+        未決未賠1: "775,975",
+        未決未賠2: "569,583",
+        增減變動1: "206,392",
+        未決未賠3: "0",
+        未決未賠4: "0",
+        增減變動2: "0",
+    },
+];
+
+var table16 = new Tabulator("#table16", {
+    data: table16Data,
+    layout: "fitColumns",
+    height: "100%",
+    pagination: "local",
+    paginationSize: 100,
+    paginationSizeSelector: [5, 10, 30, 50, true],
+    movableColumns: true,
+    resizableRows: true,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [
+        { title: "列號", field: "列號", maxWidth: 40, minWidth: 40, headerSort: false },
+        { title: "險別", field: "險別" },
+        { title: "代號", field: "代號" },
+        {
+            title: "110/9月",
+            headerHozAlign: "center",
+            columns: [{
+                title: "保險賠款",
+                headerHozAlign: "center",
+                columns: [{
+                    title: "未決未賠",
+                    field: "未決未賠1",
+                    hozAlign: "right"
+                }],
+            }],
+        },
+        {
+            title: "110/10月",
+            headerHozAlign: "center",
+            columns: [{
+                title: "保險賠款",
+                headerHozAlign: "center",
+                columns: [{
+                    title: "未決未賠",
+                    field: "未決未賠2",
+                    hozAlign: "right"
+                }],
+            }],
+        },
+        { title: "增減變動", field: "增減變動1", hozAlign: "right" },
+        {
+            title: "110/9月",
+            headerHozAlign: "center",
+            columns: [{
+                title: "攤回保險賠款",
+                headerHozAlign: "center",
+                columns: [{
+                    title: "未決未賠",
+                    field: "未決未賠3",
+                    hozAlign: "right"
+                }],
+            }],
+        },
+        {
+            title: "110/10月",
+            headerHozAlign: "center",
+            columns: [{
+                title: "攤回保險賠款",
+                headerHozAlign: "center",
+                columns: [{
+                    title: "未決未賠",
+                    field: "未決未賠4",
+                    hozAlign: "right"
+                }],
+            }],
+        },
+        { title: "增減變動", field: "增減變動2", hozAlign: "right" },
+    ],
+});
+// 選擇預設勾選row
+// table01.selectRow(["a1"]);
+// 使用filter能精準指定欄位
+// table.selectRow(table.setFilter("id","=","a1"));
 </script>
 
 </html>
