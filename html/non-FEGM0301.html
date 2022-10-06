@@ -166,7 +166,7 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title">履約保證金</div>
+                                <div class="unitname-item unitname-title">履約保證金/押標金查詢</div>
                                 <div class="unitname-item unitname-favourite">
                                     <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
                                 </div>
@@ -182,9 +182,23 @@
                                 <!-- query -->
                                 <div class="content-component content-query">
                                     <div class="query-row">
+                                        <div class="query-field query-radio">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">作業項目</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <ul>
+                                                        <li><input type="radio" id="rd01" name="押標金"><label for="rd01">押標金</label></li>
+                                                        <li><input type="radio" id="rd02" name="履約保證金"><label for="rd02">履約保證金</label></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="query-row">
                                         <div class="query-field query-datepicker">
                                             <div class="query-field-inner">
-                                                <div class="query-field-item query-field-title">1列帳單位</div>
+                                                <div class="query-field-item query-field-title">列帳單位</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <div class="entry-inner">
                                                         <div class="entry-combine entry-4">
@@ -216,6 +230,36 @@
                                                 <div class="query-field-item query-field-title">標案名稱</div>
                                                 <div class="entry-combine entry-10">
                                                     <input type="text" name="列帳單位" value="00" title="00" data-toggle="tooltip" data-placement="top">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-input">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">列帳單位</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <div class="entry-inner">
+                                                        <div class="entry-combine entry-4">
+                                                            <input type="text" name="列帳單位" value="00" title="00" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                        <div class="entry-combine entry-6">
+                                                            <input type="text" disabled="" attr="readonly" data-toggle="tooltip" data-placement="top">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="query-field query-selector">
+                                            <div class="query-field-inner">
+                                                <div class="query-field-item query-field-title">結案方式</div>
+                                                <div class="query-field-item query-field-entry">
+                                                    <select name="信評機構" id="">
+                                                        <option value="" selected>原票託收</option>
+                                                        <option value="">換票託收</option>
+                                                        <option value="">轉做履約保證金</option>
+                                                        <option value="">匯款存入</option>
+                                                        <option value="">其他</option>
+                                                        <option value="">原存單回存</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
