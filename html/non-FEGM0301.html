@@ -187,7 +187,7 @@
                                                 <div class="query-field-item query-field-title">作業項目</div>
                                                 <div class="query-field-item query-field-entry">
                                                     <ul>
-                                                        <li><input type="radio" id="rd01" name="押標金"><label for="rd01">押標金</label></li>
+                                                        <li><input type="radio" id="rd01" name="押標金" checked="true"><label for="rd01">押標金</label></li>
                                                         <li><input type="radio" id="rd02" name="履約保證金"><label for="rd02">履約保證金</label></li>
                                                     </ul>
                                                 </div>
@@ -382,6 +382,8 @@
                                         </div>
                                     </div>
                                     <div id="table01"></div>
+                                    <hr class="seperate-line">
+                                    <div id="table05"></div>
                                     <div class="table-footer">table-footer</div>
                                 </div>
                             </div>
@@ -567,7 +569,7 @@
 <script>
 let table01Data = [{
     id: "b1",
-    列帳單位: "設計文字",
+    列帳單位: "此table為選擇押標金時出現欄位",
     標案名稱: "設計文字",
     付款日: "設計文字",
     序號: "設計文字",
@@ -622,15 +624,15 @@ table01.selectRow("b1");
 <script>
 let table05Data = [{
     id: "b1",
-    銀行帳號: "設計文字",
-    交易時間: "設計文字",
-    交易序號: "設計文字",
-    交易金額: "設計文字",
-    收費序號: "設計文字",
-    流水號: "設計文字",
-    幣別: "設計文字",
-    總筆數: "設計文字",
-    請款總金額: "設計文字",
+    列帳單位: "此table為選擇履約保證金時出現欄位",
+    標案名稱: "設計文字",
+    付款日: "設計文字",
+    序號: "設計文字",
+    開標日期: "設計文字",
+    險種: "設計文字",
+    出單單位: "設計文字",
+    保單號碼: "設計文字",
+
 }, ];
 var table05 = new Tabulator("#table05", {
     data: table05Data,
@@ -658,15 +660,14 @@ var table05 = new Tabulator("#table05", {
                 cell.getRow().toggleSelect();
             }
         },
-        { title: "銀行帳號", field: "銀行帳號" },
-        { title: "交易時間", field: "交易時間" },
-        { title: "交易序號", field: "交易序號" },
-        { title: "交易金額", field: "交易金額" },
-        { title: "收費序號", field: "收費序號" },
-        { title: "流水號", field: "流水號" },
-        { title: "幣別", field: "幣別" },
-        { title: "總筆數", field: "總筆數" },
-        { title: "請款總金額", field: "請款總金額" },
+        { title: "列帳單位", field: "列帳單位" },
+        { title: "標案名稱", field: "標案名稱" },
+        { title: "付款日", field: "付款日" },
+        { title: "序號", field: "序號" },
+        { title: "開標日期", field: "開標日期" },
+        { title: "險種", field: "險種" },
+        { title: "出單單位", field: "出單單位" },
+        { title: "保單號碼", field: "保單號碼" },
     ],
 });
 // 選擇預設勾選row
