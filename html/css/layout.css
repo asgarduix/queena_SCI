@@ -4453,6 +4453,10 @@ a.menu-active .menu-bar {
     max-width: 130px;
 }
 
+.customize-form-subtitle {
+    font-weight: bold;
+}
+
 .customize-form-entry {
     width: calc(100% - 105px);
     background: #fff;
@@ -4474,8 +4478,12 @@ a.menu-active .menu-bar {
 
 .customize-form-entry ul {
     list-style: none;
-    padding: 0 2px;
-    margin: 0 0 5px 0;
+    padding: 5px;
+    margin: 0;
+}
+
+.customize-form-entry ul:nth-child(1) {
+    padding-top: 3px;
 }
 
 .customize-form-entry ul:nth-last-child(1) {
@@ -4485,6 +4493,23 @@ a.menu-active .menu-bar {
 .customize-form-entry li {
     display: inline-block;
     margin-right: 2px;
+}
+
+.customize-form-entry-group {
+    border-bottom: #ccc dotted 1px;
+    position: relative;
+}
+
+.customize-form-entry-group:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.customize-form-entry-group span[after-icon]::after {
+    content: "%";
+    display: inline-block;
+    width: 20px;
+    padding-left: 3px;
+    position: absolute;
 }
 
 .customize-form-entry input[type="radio"],
@@ -4518,6 +4543,7 @@ a.menu-active .menu-bar {
     display: table;
     table-layout: fixed;
     padding-right: 10px;
+    line-height: 1;
 }
 
 .customize-form-entry li div label,
