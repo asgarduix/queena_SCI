@@ -439,13 +439,13 @@ var table02 = new Tabulator("#table02", {
             }
         },
         {
-            title: "銷帳編號",
-            field: "銷帳編號",
+            title: "清帳編號",
+            field: "清帳編號",
             formatter: function(cell, formatterParams, onRendered) {
                 return "<a href='riaf001-04-query-popup.html'>" + cell.getValue() + "</a>"
             },
         },
-        { title: "暫收付代號", field: "暫收付代號" },
+        { title: "記錄單號", field: "記錄單號" },
         { title: "分出入別", field: "分出入別" },
         { title: "險別", field: "險別" },
         { title: "備註", field: "備註" },
