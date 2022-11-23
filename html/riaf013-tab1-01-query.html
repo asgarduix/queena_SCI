@@ -84,27 +84,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- unittab -->
-                        <div class="card-detail">
-                            <!-- card-detail >> board -->
-                            <div class="detail-board detail-board-unittab">
-                                <!-- unitTab -->
-                                <div class="content-component content-unittab">
-                                    <ul>
-                                        <li><a href="riaf013-tab1-01-query.html" class="unittab-active">明細查詢</a></li>
-                                        <li><a href="riaf013-tab2-01-query.html">清帳批號</a></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                         <!-- query -->
                         <div class="card-detail">
                             <!-- card-detail >> board -->
@@ -573,12 +552,13 @@ var table01 = new Tabulator("#table01", {
         { title: "借方金額", field: "借方金額", hozAlign: "right" },
         { title: "貸方金額", field: "貸方金額", hozAlign: "right" },
         { title: "已收付金額", field: "已收付金額", hozAlign: "right" },
+        //消帳金額為input可修改，資料與已收付金額同步，有修改就checkbox就勾選
+        { title: "消帳金額", field: "消帳金額" },
         { title: "記錄單號", field: "記錄單號" },
         { title: "險別", field: "險別" },
         { title: "分入/分出", field: "分入分出" },
         { title: "Our Reference", field: "OurReference" },
         { title: "Your Reference", field: "YourReference" },
-        { title: "帳務描述", field: "帳務描述" },
     ],
 });
 // 選擇預設勾選row
