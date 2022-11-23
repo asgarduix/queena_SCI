@@ -342,16 +342,22 @@
 <script>
 let table01Data = [{
         id: "a1",
-        公司代碼: "01",
-        公司名稱: "華南",
+        銷帳編號: "01",
+        暫收付代號: "華南",
+        分出入別: "分出",
+        險別: "火險",
+        備註: "",
         幣別: "NTD",
-        暫收付金額: "3,651,858.00",
+        原幣金額: "3,651,858.00",
+        借方折台: "3,651,858.00",
+        貸方折台: "3,651,858.00",
+        銷帳日: "3,651,858.00",
     },
 ];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
     layout: "fitColumns",
-    height: "255px",
+    height: "150px",
     pagination: "local",
     paginationSize: true,
     paginationSizeSelector: [5, 10, 30, 50, true],
@@ -363,7 +369,7 @@ var table01 = new Tabulator("#table01", {
     selectable: true,
     columns: [{
             formatter: "rowSelection",
-            titleFormatter: "rowSelection",
+            titleFormatter: "",
             headerHozAlign: "center",
             hozAlign: "center",
             headerSort: false,
@@ -374,32 +380,43 @@ var table01 = new Tabulator("#table01", {
             }
         },
         {
-            title: "序號",
-            field: "序號",
+            title: "銷帳編號",
+            field: "銷帳編號",
             formatter: function(cell, formatterParams, onRendered) {
                 return "<a href='riaf001-04-query-popup.html'>" + cell.getValue() + "</a>"
             },
         },
-        { title: "公司代碼", field: "公司代碼" },
-        { title: "公司名稱", field: "公司名稱" },
+        { title: "暫收付代號", field: "暫收付代號" },
+        { title: "分出入別", field: "分出入別" },
+        { title: "險別", field: "險別" },
+        { title: "備註", field: "備註" },
         { title: "幣別", field: "幣別" },
-        { title: "暫收付金額", field: "暫收付金額" },
+        { title: "原幣金額", field: "原幣金額" },
+        { title: "借方(折台)", field: "借方(折台)" },
+        { title: "貸方(折台)", field: "貸方(折台)" },
+        { title: "銷帳日", field: "銷帳日" },
     ],
 });
 
 
 let table02Data = [{
         id: "a1",
-        公司代碼: "01",
-        公司名稱: "華南",
+        銷帳編號: "01",
+        暫收付代號: "華南",
+        分出入別: "分出",
+        險別: "火險",
+        備註: "",
         幣別: "NTD",
-        暫收付金額: "3,651,858.00",
+        原幣金額: "3,651,858.00",
+        借方折台: "3,651,858.00",
+        貸方折台: "3,651,858.00",
+        銷帳日: "3,651,858.00",
     },
 ];
 var table02 = new Tabulator("#table02", {
     data: table01Data,
     layout: "fitColumns",
-    height: "255px",
+    height: "150px",
     pagination: "local",
     paginationSize: true,
     paginationSizeSelector: [5, 10, 30, 50, true],
@@ -411,7 +428,7 @@ var table02 = new Tabulator("#table02", {
     selectable: true,
     columns: [{
             formatter: "rowSelection",
-            titleFormatter: "rowSelection",
+            titleFormatter: "",
             headerHozAlign: "center",
             hozAlign: "center",
             headerSort: false,
@@ -422,16 +439,21 @@ var table02 = new Tabulator("#table02", {
             }
         },
         {
-            title: "序號",
-            field: "序號",
+            title: "銷帳編號",
+            field: "銷帳編號",
             formatter: function(cell, formatterParams, onRendered) {
                 return "<a href='riaf001-04-query-popup.html'>" + cell.getValue() + "</a>"
             },
         },
-        { title: "公司代碼", field: "公司代碼" },
-        { title: "公司名稱", field: "公司名稱" },
+        { title: "暫收付代號", field: "暫收付代號" },
+        { title: "分出入別", field: "分出入別" },
+        { title: "險別", field: "險別" },
+        { title: "備註", field: "備註" },
         { title: "幣別", field: "幣別" },
-        { title: "暫收付金額", field: "暫收付金額" },
+        { title: "原幣金額", field: "原幣金額" },
+        { title: "借方(折台)", field: "借方(折台)" },
+        { title: "貸方(折台)", field: "貸方(折台)" },
+        { title: "銷帳日", field: "銷帳日" },
     ],
 });
 // 選擇預設勾選row
