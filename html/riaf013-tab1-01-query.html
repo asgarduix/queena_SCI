@@ -597,7 +597,12 @@ var table01 = new Tabulator("#table01", {
         { title: "已收付金額", field: "已收付金額", hozAlign: "right" },
         //消帳金額為input可修改，資料與已收付金額同步，有修改就checkbox就勾選
         { title: "消帳金額", field: "消帳金額" },
-        { title: "記錄單號", field: "記錄單號" },
+        { title: "記錄單號", field: "記錄單號" ,
+            formatter: function(cell, formatterParams, onRendered) {
+                    return "<a href='riaf007-04-query-popup.html'>" + cell.getValue() + "</a>"
+                },
+                //若判定為分入顯示riaf007-04-query-popup.html若是分出則為riaf001-04-query-popup.html
+        },
         { title: "險別", field: "險別" },
         { title: "分入/分出", field: "分入分出" },
         { title: "Our Reference", field: "OurReference" },
