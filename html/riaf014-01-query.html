@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>華南產物保險-RIAF013-同業往來維護</title>
+    <title>華南產物保險-RIAF014-清帳查詢維護</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.ico">
     <!-- jQuery-ui -->
@@ -78,7 +78,7 @@
                         <!-- unitname -->
                         <div class="content-component content-unitname">
                             <div class="unitname-inner">
-                                <div class="unitname-item unitname-title">清帳維護(暫)</div>
+                                <div class="unitname-item unitname-title">清帳查詢維護</div>
                                 <div class="unitname-item unitname-favourite">
                                     <a href="#" data-toggle="tooltip" title="加入我的最愛" data-placement="left"><span class="material-icons">star_outline</span></a>
                                 </div>
@@ -149,7 +149,6 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-delete"><span>刪除</span></button></li>
                                         </ul>
                                     </div>
@@ -160,6 +159,7 @@
                                     </div>
                                     <div class="content-btn-third">
                                         <ul>
+                                            <li><button class="content-btn-item btn-third" type="button" onclick="location.href='riaf013-tab2-detail-tab1-query.html'"><span>付款設定</span></button></li>
                                             <li><button class="content-btn-item btn-third" type="button"><span>轉檔付款</span></button></li>
                                             <li><button class="content-btn-item btn-third" type="button"><span>編製傳票</span></button></li>
                                         </ul>
@@ -231,28 +231,13 @@
 <script>
 let table01Data = [{
         id: "a1",
-        清帳批號: "H11008017",
+        清帳批號: "11008017",
         清帳日期: "清帳日期",
         公司代碼: "公司代碼",
         公司名稱: "公司名稱",
         編輯日期: "編輯日期",
     },
-    {
-        id: "a2",
-        清帳批號: "H清帳批號1",
-        清帳日期: "清帳日期",
-        公司代碼: "公司代碼",
-        公司名稱: "公司名稱",
-        編輯日期: "編輯日期",
-    },
-    {
-        id: "a3",
-        清帳批號: "H清帳批號1",
-        清帳日期: "清帳日期",
-        公司代碼: "公司代碼",
-        公司名稱: "公司名稱",
-        編輯日期: "編輯日期",
-    },
+
 ];
 var table01 = new Tabulator("#table01", {
     data: table01Data,
@@ -283,7 +268,7 @@ var table01 = new Tabulator("#table01", {
             title: "清帳批號",
             field: "清帳批號",
             formatter: function(cell, formatterParams, onRendered) {
-                return "<a href='riaf013-tab2-detail-tab1-query.html'>" + cell.getValue() + "</a>"
+                return "<a href='riaf014-01-query-popup.html'>" + cell.getValue() + "</a>"
             },
         },
         { title: "清帳日期", field: "清帳日期" },

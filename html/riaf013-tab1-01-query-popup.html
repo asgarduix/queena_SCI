@@ -392,7 +392,7 @@
                                         <ul>
                                             <li><button class="content-btn-item btn-main btn-clear"><span>清除</span></button></li>
                                             <li><button class="content-btn-item btn-main btn-query"><span>查詢</span></button></li>
-                                            <li><button class="content-btn-item btn-main btn-modify" onclick="location.href='riaf013-tab1-01-query-popup.html'"><span>修改</span></button></li>
+                                            <li><button class="content-btn-item btn-main btn-modify"><span>修改</span></button></li>
                                         </ul>
                                     </div>
                                     <div class="content-btn-secondary">
@@ -489,7 +489,44 @@
             </main>
         </div>
     </div>
-    <!-- popup -->
+        <!-- popup-add -->
+        <div class="content-component content-popup">
+            <div class="popup-dialog popup-dialog-md">
+                <form action="">
+                    <div class="dialog-header">
+                        <div class="dialog-header-inner">
+                            <div class="dialog-header-item dialog-title">清帳批號修改</div>
+                            <div class="dialog-header-item dialog-cancel">
+                                <a href="riaf001-01-query.html"><span class="material-icons">cancel</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog-content">
+                        <!-- customize-form -->
+                        <div class="customize-form">
+                            <div class="customize-form-row">
+                                <div class="customize-table">
+                                    <div class="card-detail">
+                                        <!-- card-detail >> board -->
+                                        <div class="detail-board">
+                                            <div class="content-component content-table content-table-counter">
+                                                <div id="tableSelect"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog-btn">
+                        <ul>
+                            <li><button type="button" class="btn-prime" onclick="location.href='riaf013-tab1-01-query.html'">確定</button></li>
+                            <li><button type="button" class="btn-outline" onclick="location.href='riaf013-tab1-01-query.html'">取消</button></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
 </body>
 <!-- jQuery_3.5.1  -->
 <script src="js/jquery-3.5.1.min.js"></script>
@@ -665,6 +702,78 @@ var table02 = new Tabulator("#table02", {
 //popupOperationTable.selectRow(["a1"]);
 // 使用filter能精準指定欄位
 //table.selectRow(table.setFilter("id","=","a1"));
+
+let tableSelectData = [{
+        id: "a1",
+        清帳批號: "0101000101"
+    },
+    {
+        id: "a2",
+        清帳批號: "02-0101000101"
+    },
+    {
+        id: "a3",
+        清帳批號: "03-0101000101"
+    },
+    {
+        id: "a4",
+        清帳批號: "04-0101000101"
+    },
+    {
+        id: "a5",
+        清帳批號: "05-0101000101"
+    },
+    {
+        id: "a6",
+        清帳批號: "06-0101000101"
+    },
+    {
+        id: "a7",
+        清帳批號: "07-0101000101"
+    },
+    {
+        id: "a8",
+        清帳批號: "08-0101000101"
+    },
+    {
+        id: "a9",
+        清帳批號: "09-0101000101"
+    },
+    {
+        id: "a10",
+        清帳批號: "10-0101000101"
+    },
+];
+var tableSelect = new Tabulator("#tableSelect", {
+    data: tableSelectData,
+    height: "100%",
+    layout: "fitColumns",
+    pagination: false,
+    movableColumns: false,
+    resizableRows: false,
+    tooltips: true,
+    tooltipsHeader: true,
+    tooltipGenerationMode: "hover",
+    selectable: true,
+    columns: [{
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
+        { title: "清帳批號", field: "清帳批號" },
+    ],
+});
+
+
 </script>
+
+
 
 </html>
