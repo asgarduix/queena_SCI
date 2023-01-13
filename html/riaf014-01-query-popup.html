@@ -255,7 +255,7 @@
                 </div>
                 <div class="dialog-btn">
                     <ul>
-                        <li><button type="button" class="btn-prime" onclick="location.href='riaf014-01-query.html'">確定</button></li>
+                        <li><button type="button" class="btn-prime" onclick="location.href='riaf014-01-query.html'">刪除</button></li>
                         <li><button type="button" class="btn-outline" onclick="location.href='riaf014-01-query.html'">取消</button></li>
                     </ul>
                 </div>
@@ -404,6 +404,18 @@ var table03 = new Tabulator("#table03", {
     tooltipGenerationMode: "hover",
     selectable: true,
     columns: [
+        {
+            formatter: "rowSelection",
+            titleFormatter: "rowSelection",
+            headerHozAlign: "center",
+            hozAlign: "center",
+            headerSort: false,
+            maxWidth: 30,
+            minWidth: 30,
+            cellClick: function(e, cell) {
+                cell.getRow().toggleSelect();
+            }
+        },
         { title: "幣別", field: "幣別",},
         { title: "經紀人", field: "經紀人" },
         { title: "再保公司", field: "再保公司" },
